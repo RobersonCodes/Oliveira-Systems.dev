@@ -1,388 +1,175 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Guardian Recovery | Oliveira Systems</title>
-
-  <meta
-    name="description"
-    content="Guardian Recovery - Plataforma enterprise de monitoramento, incidentes e disaster recovery."
-  />
-
+  <meta name="description" content="Guardian Recovery — Enterprise monitoring platform for service uptime, incident detection, and disaster recovery." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../style.css" />
 </head>
-
 <body>
+<div id="scrollBar"></div>
+<!-- Brand watermarks -->
+<div class="brand-watermark" aria-hidden="true"><img src="../Imagens/Banner_Fundo.png" alt="" /></div>
+<div class="wm-corner wm-tl" aria-hidden="true"><img src="../Imagens/Banner_Fundo.png" alt="" /></div>
 
-  <!-- HEADER -->
+<div class="cursor-glow"></div>
+<div class="animated-bg" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
 
-  <header class="header">
-    <nav class="nav container">
-
-      <a href="../index.html" class="brand">
-        <span class="brand-icon">RO</span>
-        <span>Oliveira Systems</span>
-      </a>
-
-      <ul class="nav-links">
-        <li><a href="../index.html#sobre">Sobre</a></li>
-        <li><a href="../index.html#servicos">Serviços</a></li>
-        <li><a href="../index.html#projetos">Projetos</a></li>
-        <li><a href="../index.html#contato">Contato</a></li>
-      </ul>
-
-    </nav>
-  </header>
-
-  <main>
-
-    <!-- HERO -->
-
-    <section class="startup-hero guardian-hero">
-
-      <div class="container startup-hero-grid">
-
-        <div class="startup-copy">
-
-          <span class="section-label">
-            Monitoring • Incident Response • Disaster Recovery
-          </span>
-
-          <h1>Guardian Recovery</h1>
-
-          <p>
-            Plataforma enterprise para monitoramento de serviços,
-            detecção de falhas, abertura automática de incidentes
-            e recuperação operacional em tempo real.
-          </p>
-
-          <div class="hero-actions">
-
-            <a
-              class="btn btn-primary"
-              href="https://github.com/RobersonCodes/Guardian-Recovery-Platform-Plataforma-Enterprise-de-Monitoramento-e-Disaster-Recovery"
-              target="_blank"
-            >
-              Ver no GitHub
-            </a>
-
-            <a
-              class="btn btn-outline"
-              href="../index.html#projetos"
-            >
-              Voltar aos projetos
-            </a>
-
-          </div>
-
-        </div>
-
-        <div class="startup-banner">
-
-          <img
-  class="zoomable-image"
-  src="../Imagens/Guardian.png"
-  alt="Guardian Dashboard"
->
-
-        </div>
-
+<header class="header">
+  <nav class="nav container">
+    <a href="../index.html" class="brand"><span class="brand-icon"><img src="../Imagens/Banner_Fundo.png" alt="OS Logo" /></span><span>Oliveira Systems</span></a>
+    <div class="nav-right">
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="pt">PT</button>
+        <button class="lang-btn" data-lang="en">EN</button>
       </div>
-
-    </section>
-
-    <!-- MÉTRICAS -->
-
-    <section class="section startup-metrics-section">
-
-      <div class="container startup-metrics">
-
-        <div>
-          <strong>99.9%</strong>
-          <span>System Uptime</span>
-        </div>
-
-        <div>
-          <strong>24/7</strong>
-          <span>Monitoramento</span>
-        </div>
-
-        <div>
-          <strong>12ms</strong>
-          <span>Response Time</span>
-        </div>
-
-        <div>
-          <strong>Realtime</strong>
-          <span>Incident Detection</span>
-        </div>
-
-      </div>
-
-    </section>
-
-    <!-- GALERIA -->
-
-    <section class="section">
-
-      <div class="container">
-
-        <span class="section-label">Dashboard</span>
-
-        <h2 class="center-title">
-          Monitoramento em tempo real
-        </h2>
-
-        <div class="gallery-grid">
-
-          <img
-            src="../Imagens/Dashboard.png"
-            alt="Guardian Dashboard"
-          >
-
-          <img
-            src="../Imagens/incidents.png"
-            alt="Incidents"
-          >
-
-          <img
-            src="../Imagens/servicos.png"
-            alt="Services Monitoring"
-          >
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <!-- PROBLEMA / SOLUÇÃO -->
-
-    <section class="section dark-section">
-
-      <div class="container case-grid">
-
-        <article class="case-card">
-
-          <span class="section-label">Problema</span>
-
-          <h2>
-            Sistemas fora do ar podem causar prejuízos críticos.
-          </h2>
-
-          <p>
-            Empresas precisam detectar falhas rapidamente,
-            monitorar disponibilidade e responder incidentes
-            antes que afetem usuários e operações.
-          </p>
-
-        </article>
-
-        <article class="case-card">
-
-          <span class="section-label">Solução</span>
-
-          <h2>
-            Monitoramento contínuo com incident response automatizado.
-          </h2>
-
-          <p>
-            O Guardian Recovery monitora serviços em tempo real,
-            executa health checks, mede tempo de resposta
-            e gera incidentes automaticamente.
-          </p>
-
-        </article>
-
-      </div>
-
-    </section>
-
-    <!-- STACK -->
-
-    <section class="section">
-
-      <div class="container">
-
-        <span class="section-label">Tecnologias</span>
-
-        <h2 class="center-title">
-          Stack utilizada no projeto
-        </h2>
-
-        <div class="cards">
-
-          <article class="card">
-            <div class="icon">☕</div>
-            <h3>Java 17</h3>
-            <p>
-              Backend enterprise orientado a performance,
-              estabilidade e escalabilidade.
-            </p>
-          </article>
-
-          <article class="card">
-            <div class="icon">SB</div>
-            <h3>Spring Boot</h3>
-            <p>
-              APIs REST para monitoramento, incidentes
-              e gerenciamento de serviços.
-            </p>
-          </article>
-
-          <article class="card">
-            <div class="icon">JWT</div>
-            <h3>JWT Security</h3>
-            <p>
-              Autenticação segura para controle
-              administrativo e APIs protegidas.
-            </p>
-          </article>
-
-          <article class="card">
-            <div class="icon">DB</div>
-            <h3>MySQL</h3>
-            <p>
-              Persistência de incidentes,
-              logs e métricas de monitoramento.
-            </p>
-          </article>
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <!-- DIFERENCIAIS -->
-
-    <section class="section dark-section">
-
-      <div class="container">
-
-        <span class="section-label">Diferenciais</span>
-
-        <h2 class="center-title">
-          Recursos principais da plataforma
-        </h2>
-
-        <div class="project-grid">
-
-          <article class="project-card">
-
-            <span class="project-tag">
-              Monitoring
-            </span>
-
-            <h3>Health Checks</h3>
-
-            <p>
-              Verificação contínua de disponibilidade
-              e status dos serviços monitorados.
-            </p>
-
-          </article>
-
-          <article class="project-card">
-
-            <span class="project-tag">
-              Incidents
-            </span>
-
-            <h3>Incidentes automáticos</h3>
-
-            <p>
-              Criação automática de incidentes
-              quando serviços ficam offline.
-            </p>
-
-          </article>
-
-          <article class="project-card">
-
-            <span class="project-tag">
-              Metrics
-            </span>
-
-            <h3>Métricas em tempo real</h3>
-
-            <p>
-              Response time, uptime, disponibilidade
-              e monitoramento operacional.
-            </p>
-
-          </article>
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <!-- RESULTADO -->
-
-    <section class="section">
-
-      <div class="container case-result">
-
-        <span class="section-label">Resultado</span>
-
-        <h2>
-          Uma plataforma inspirada em sistemas enterprise modernos.
-        </h2>
-
-        <p>
-          O Guardian Recovery demonstra domínio em backend Java,
-          arquitetura REST, monitoramento, incident response
-          e sistemas corporativos de alta disponibilidade.
-        </p>
-
-        <p>
-          O projeto foi desenvolvido com foco em escalabilidade,
-          observabilidade e monitoramento contínuo,
-          seguindo conceitos utilizados por plataformas SaaS modernas.
-        </p>
-
-        <div class="hero-actions">
-
-          <a
-            class="btn btn-primary"
-            href="https://github.com/RobersonCodes/Guardian-Recovery-Platform-Plataforma-Enterprise-de-Monitoramento-e-Disaster-Recovery"
-            target="_blank"
-          >
-            Acessar repositório
-          </a>
-
-        </div>
-
-      </div>
-
-    </section>
-
-  </main>
-
-  <!-- FOOTER -->
-
-  <footer class="footer">
-
-    <div class="container footer-content">
-
-      <p>
-        © 2026 Oliveira Systems. Todos os direitos reservados.
-      </p>
-
-      <p>
-        Guardian Recovery • Monitoring • Incident Response
-      </p>
-
+      <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
     </div>
+    <div class="nav-right"><ul class="nav-links" id="navLinks">
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#services">Services</a></li>
+      <li><a href="../index.html#projects">Projects</a></li>
+      <li><a href="../index.html#contact" class="nav-cta">Get in Touch</a></li>
+    </ul>
+  </nav>
+</header>
 
-  </footer>
+<main>
 
+  <section class="startup-hero guardian-hero">
+    <div class="container startup-hero-grid">
+      <div class="startup-copy">
+        <span class="section-label">Monitoring · Incident Response · Disaster Recovery</span>
+        <h1>Guardian Recovery</h1>
+        <p>Enterprise platform for real-time service monitoring, automated incident creation, and operational recovery — built for teams that can't afford downtime.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://github.com/RobersonCodes/Guardian-Recovery-Platform-Plataforma-Enterprise-de-Monitoramento-e-Disaster-Recovery" target="_blank" rel="noopener">View on GitHub</a>
+          <a class="btn btn-outline" href="../index.html#projects">← Back to Projects</a>
+        </div>
+      </div>
+      <div class="startup-banner">
+        <img class="zoomable-image" src="../Imagens/Guardian.png" alt="Guardian Recovery Dashboard" />
+      </div>
+    </div>
+  </section>
+
+  <section class="startup-metrics-section">
+    <div class="container startup-metrics">
+      <div><strong>99.9%</strong><span>System Uptime</span></div>
+      <div><strong>24/7</strong><span>Continuous Monitoring</span></div>
+      <div><strong>12ms</strong><span>Avg Response Time</span></div>
+      <div><strong>Real‑time</strong><span>Incident Detection</span></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <span class="section-label">Dashboard</span>
+      <h2 class="center-title">Real-time monitoring at a glance</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item"><img class="zoomable-image" src="../Imagens/Dashboard.png"  alt="Guardian Dashboard" /></div>
+        <div class="gallery-item"><img class="zoomable-image" src="../Imagens/incidents.png"  alt="Incidents Management" /></div>
+        <div class="gallery-item"><img class="zoomable-image" src="../Imagens/servicos.png"   alt="Services Monitoring" /></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section dark-section">
+    <div class="container case-grid">
+      <article class="case-card">
+        <span class="section-label">Problem</span>
+        <h2>Downtime costs money. Slow detection makes it worse.</h2>
+        <p>Enterprises need to detect failures in seconds, track service availability across distributed systems, and respond to incidents before they cascade into user-facing outages.</p>
+      </article>
+      <article class="case-card">
+        <span class="section-label">Solution</span>
+        <h2>Continuous monitoring with automated incident response.</h2>
+        <p>Guardian Recovery polls services in real time, runs health checks, measures response latency, and automatically opens incidents when services degrade — reducing MTTR dramatically.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <span class="section-label">Technologies</span>
+      <h2 class="center-title">Stack powering the platform</h2>
+      <div class="cards">
+        <article class="card">
+          <div class="icon">☕</div>
+          <h3>Java 17</h3>
+          <p>Enterprise-grade backend — performance, stability, and object-oriented precision.</p>
+        </article>
+        <article class="card">
+          <div class="icon">SB</div>
+          <h3>Spring Boot</h3>
+          <p>REST APIs for monitoring, incident lifecycle management, and service orchestration.</p>
+        </article>
+        <article class="card">
+          <div class="icon">JWT</div>
+          <h3>JWT Security</h3>
+          <p>Token-based authentication protecting administrative access and API endpoints.</p>
+        </article>
+        <article class="card">
+          <div class="icon">DB</div>
+          <h3>MySQL</h3>
+          <p>Persistent storage for incidents, health logs, and monitoring metrics.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section dark-section">
+    <div class="container">
+      <span class="section-label">Key Features</span>
+      <h2 class="center-title">Platform capabilities</h2>
+      <div class="project-grid">
+        <article class="project-card-sm">
+          <span class="project-tag">Monitoring</span>
+          <h3>Health Checks</h3>
+          <p>Continuous availability checks across all registered services with configurable intervals.</p>
+        </article>
+        <article class="project-card-sm">
+          <span class="project-tag">Incidents</span>
+          <h3>Auto Incidents</h3>
+          <p>Incidents are created automatically when services go offline — no manual intervention needed.</p>
+        </article>
+        <article class="project-card-sm">
+          <span class="project-tag">Metrics</span>
+          <h3>Live Metrics</h3>
+          <p>Response time, uptime percentage, and operational status visible at all times.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container case-result" style="margin:0 auto;">
+      <span class="section-label">Outcome</span>
+      <h2>A platform modeled after modern enterprise observability tools.</h2>
+      <p>Guardian Recovery demonstrates deep competency in Java backend engineering, REST API design, monitoring systems, and incident response workflows — concepts used by SaaS platforms like PagerDuty and Datadog.</p>
+      <p>Designed with scalability and observability in mind, the codebase follows clean architecture principles and is ready to support multi-tenant environments.</p>
+      <div class="hero-actions" style="justify-content:center;margin-top:36px;">
+        <a class="btn btn-primary" href="https://github.com/RobersonCodes/Guardian-Recovery-Platform-Plataforma-Enterprise-de-Monitoramento-e-Disaster-Recovery" target="_blank" rel="noopener">View Repository</a>
+        <a class="btn btn-outline" href="../index.html#projects">← All Projects</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-wm" aria-hidden="true"><img src="../Imagens/Banner_Fundo.png" alt="" /></div>
+  <div class="container footer-bottom">
+    <p>© 2026 Oliveira Systems — All rights reserved.</p>
+    <span class="status-dot">Guardian Recovery · Enterprise Monitoring</span>
+  </div>
+</footer>
+
+<div class="image-modal" id="imageModal"><span class="close-modal">&times;</span><img id="modalImage" src="" alt="" /></div>
+<script src="../main.js"></script>
 </body>
-
 </html>
