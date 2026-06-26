@@ -272,6 +272,29 @@ h1 .accent { color:var(--signal); white-space:nowrap; }
   .meta-row { margin-top:12px; gap:14px; }
   .eyebrow { margin-bottom:10px; }
 }
+/* Celulares físicos com "Modo site para computador" ativado: a largura
+   virtual passa a ser >860px, então as regras mobile acima não disparam.
+   Aqui detectamos o hardware real (tela de toque, sem mouse) em vez da
+   largura, e reaplicamos uma versão das mesmas regras compactada para
+   essa largura virtual maior (geralmente ~980-1024px). */
+@media (min-width: 861px) and (pointer: coarse) and (hover: none) {
+  .hero {
+    min-height:100vh;
+    padding:90px 0 40px;
+    background-size:cover; background-position:center 22%;
+  }
+  .hero::before {
+    background:linear-gradient(180deg, rgba(4,5,6,.55) 0%, rgba(4,5,6,.88) 45%, rgba(4,5,6,.97) 100%);
+  }
+  .hero::after {
+    background:rgba(4,5,6,.35);
+  }
+  .hero h1 { font-size:clamp(2.2rem, 6vw, 3.2rem); }
+  .hero-sub { margin-top:16px; font-size:1rem; max-width:100%; }
+  .hero-actions { margin-top:22px; }
+  .meta-row { margin-top:26px; gap:18px; }
+  .float-card { display:none; }
+}
 .panel-bar { display:flex; align-items:center; gap:8px; padding:16px 20px; border-bottom:1px solid var(--line); }
 .panel-bar span { width:9px; height:9px; border-radius:50%; background:var(--line-2); }
 .panel-bar .live { margin-left:auto; display:flex; align-items:center; gap:7px; font-family:var(--font-mono); font-size:.68rem; color:var(--signal); }
