@@ -251,7 +251,7 @@ h1 .accent { color:var(--signal); white-space:nowrap; }
   .hero {
     min-height:100vh;
     padding:110px 0 30px;
-    background-size:cover; background-position:center 25%;
+    background-size:cover; background-position:72% 25%;
   }
   .hero::before {
     background:linear-gradient(180deg, rgba(4,5,6,.55) 0%, rgba(4,5,6,.88) 45%, rgba(4,5,6,.97) 100%);
@@ -281,7 +281,7 @@ h1 .accent { color:var(--signal); white-space:nowrap; }
   .hero {
     min-height:100vh;
     padding:90px 0 40px;
-    background-size:cover; background-position:center 22%;
+    background-size:cover; background-position:72% 22%;
   }
   .hero::before {
     background:linear-gradient(180deg, rgba(4,5,6,.55) 0%, rgba(4,5,6,.88) 45%, rgba(4,5,6,.97) 100%);
@@ -544,7 +544,22 @@ h1 .accent { color:var(--signal); white-space:nowrap; }
 .case-intro { max-width:760px; font-size:1.12rem; color:var(--muted); margin-top:20px; line-height:1.75; }
 @media (max-width: 860px) {
   .case-hero {
-    background-size:cover; background-position:center 15%;
+    min-height:100vh; padding:110px 0 40px;
+    background-size:cover; background-position:77% 18%;
+  }
+  .case-hero::before {
+    background:linear-gradient(180deg, rgba(4,5,6,.68) 0%, rgba(4,5,6,.95) 32%, rgba(4,5,6,.97) 100%);
+  }
+  .case-hero::after {
+    background:rgba(4,5,6,.4);
+  }
+}
+/* Mesmo tratamento do .hero para "Modo site para computador" em celulares
+   reais (ver explicação detalhada na regra equivalente do .hero acima). */
+@media (min-width: 861px) and (pointer: coarse) and (hover: none) {
+  .case-hero {
+    min-height:100vh; padding:100px 0 40px;
+    background-size:cover; background-position:77% 16%;
   }
   .case-hero::before {
     background:linear-gradient(180deg, rgba(4,5,6,.68) 0%, rgba(4,5,6,.95) 32%, rgba(4,5,6,.97) 100%);
