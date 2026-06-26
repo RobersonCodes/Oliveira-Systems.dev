@@ -249,7 +249,9 @@ h1 .accent { color:var(--signal); white-space:nowrap; }
 @media (max-width: 860px) {
   .float-card { display:none; }
   .hero {
-    background-size:cover; background-position:center 15%;
+    min-height:auto;
+    padding:60px 0 360px;
+    background-size:cover; background-position:center top;
   }
   .hero::before {
     background:linear-gradient(180deg, rgba(4,5,6,.68) 0%, rgba(4,5,6,.95) 32%, rgba(4,5,6,.97) 100%);
