@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oliveira Apply AI — SaaS de Candidaturas com IA | Oliveira Systems</title>
+  <meta name="description" content="Oliveira Apply AI — SaaS brasileiro de automação de candidaturas com IA, Next.js, Node.js, Stripe e busca de vagas multi-fonte." />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+<div id="scrollBar"></div>
+
+<header class="header">
+  <nav class="nav container">
+    <a href="../index.html" class="brand">
+      <span class="brand-mark"></span>
+      <span>Oliveira Systems</span>
+    </a>
+    <div class="nav-right">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html#about" data-i18n="nav_about">Sobre</a></li>
+        <li><a href="../index.html#services" data-i18n="nav_services">Serviços</a></li>
+        <li><a href="../index.html#projects" data-i18n="nav_projects">Projetos</a></li>
+        <li><a href="../index.html#contact" class="nav-cta" data-i18n="nav_contact">Falar comigo</a></li>
+      </ul>
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="pt">PT</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+      <button class="menu-btn" id="menuBtn" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <section class="startup-hero startup-hero--apply-ai">
+    <div class="container startup-hero-grid">
+      <div class="startup-copy">
+        <span class="section-label">Next.js · Node.js · IA · SaaS</span>
+        <h1>Oliveira Apply AI</h1>
+        <p data-i18n="a_intro">SaaS brasileiro que automatiza a busca e aplicação a vagas de emprego com IA — onboarding guiado, busca multi-fonte, geração de candidaturas e pagamento real via Stripe.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://github.com/RobersonCodes/oliveira-apply-ai" target="_blank" rel="noopener" data-i18n="btn_github">Ver no GitHub</a>
+          <a class="btn btn-outline" href="../index.html#projects" data-i18n="btn_back">← Voltar aos projetos</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="startup-metrics-section">
+    <div class="container startup-metrics">
+      <div><strong>6</strong><span data-i18n="a_m1">Fontes de vagas integradas</span></div>
+      <div><strong>Stripe</strong><span data-i18n="a_m2">Pagamento real, 3 planos BRL</span></div>
+      <div><strong>GPT-4o-mini</strong><span data-i18n="a_m3">Geração de candidaturas</span></div>
+      <div><strong data-i18n="a_m4t">Cron</strong><span data-i18n="a_m4">Notificações automáticas por e-mail</span></div>
+    </div>
+  </section>
+
+  <section class="section dark-section">
+    <div class="container case-grid">
+      <article class="case-card">
+        <span class="section-label" data-i18n="a_challenge_label">Desafio</span>
+        <h2 data-i18n="a_challenge_h">Buscar vagas em múltiplas fontes e aplicar de forma personalizada consome horas todo dia.</h2>
+        <p data-i18n="a_challenge_p">Quem procura emprego precisa checar vários sites separadamente, adaptar currículo e carta para cada vaga, e perde candidaturas relevantes só por falta de tempo. O desafio era construir um SaaS completo — não um script — com onboarding, cobrança real e infraestrutura para escalar.</p>
+      </article>
+      <article class="case-card">
+        <span class="section-label" data-i18n="a_solution_label">Solução</span>
+        <h2 data-i18n="a_solution_h">Onboarding guiado, busca multi-fonte e geração de candidaturas com IA, tudo em produção.</h2>
+        <p data-i18n="a_solution_p">O Apply AI centraliza vagas de seis fontes (Remote OK, We Work Remotely, Wellfound, Glassdoor, Catho e Vagas.com.br) via JSearch e SerpAPI, usa GPT-4o-mini para gerar candidaturas ajustadas ao perfil do usuário, e mantém um dashboard com dados reais de progresso. Pagamento via Stripe em produção (modo live, não sandbox), com três planos em reais.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <span class="section-label" data-i18n="a_tech_label">Tecnologias</span>
+      <h2 class="center-title" data-i18n="a_tech_h">Stack</h2>
+      <div class="cards">
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 17l5-5-5-5M11 19h9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>Next.js 15 + React 19</h3>
+          <p data-i18n="a_tech1_p">Frontend e onboarding wizard hospedados na Vercel, com renderização otimizada para o dashboard do usuário.</p>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
+          <h3>Node.js + TypeScript</h3>
+          <p data-i18n="a_tech2_p">API em Express com Prisma sobre PostgreSQL, hospedada no Railway, orquestrando busca de vagas e geração de candidaturas.</p>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+          <h3>OpenAI GPT-4o-mini</h3>
+          <p data-i18n="a_tech3_p">Geração de candidaturas e ajuste de currículo por vaga, integrada diretamente ao fluxo de aplicação.</p>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M2 10h20" stroke="currentColor" stroke-width="2"/></svg></div>
+          <h3>Stripe (modo live)</h3>
+          <p data-i18n="a_tech4_p">Cobrança real em três planos em reais, sem sandbox — assinatura e gestão de plano de ponta a ponta.</p>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M3 17l5-5 4 4 8-8M14 8h6v6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>JSearch + SerpAPI</h3>
+          <p data-i18n="a_tech5_p">Busca de vagas em seis fontes diferentes, normalizadas em um único feed dentro do dashboard.</p>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.73 21a2 2 0 01-3.46 0" stroke="currentColor" stroke-width="2"/></svg></div>
+          <h3>Redis + Cron</h3>
+          <p data-i18n="a_tech6_p">Filas e jobs agendados para notificações por e-mail e atualização periódica de vagas, com LinkedIn OAuth no login.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section dark-section">
+    <div class="container case-result" style="margin:0 auto;">
+      <span class="section-label" data-i18n="a_outcome_label">Resultado</span>
+      <h2 data-i18n="a_outcome_h">Um SaaS real, com cobrança ativa e infraestrutura de produção — não um MVP de portfólio.</h2>
+      <p data-i18n="a_outcome_p">O Oliveira Apply AI demonstra capacidade de construir um produto SaaS completo: onboarding, autenticação social, integração com múltiplas APIs externas, geração de conteúdo com IA, cobrança real via Stripe e infraestrutura distribuída entre Vercel e Railway. Do cadastro ao pagamento, cada etapa funciona em produção.</p>
+      <div class="hero-actions" style="justify-content:center;margin-top:36px;">
+        <a class="btn btn-primary" href="https://github.com/RobersonCodes/oliveira-apply-ai" target="_blank" rel="noopener" data-i18n="btn_repo">Ver repositório</a>
+        <a class="btn btn-outline" href="../index.html#projects" data-i18n="btn_all">← Todos os projetos</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer-page">
+  <div class="container footer-bottom-page">
+    <p data-i18n="footer_copy">© 2026 Oliveira Systems — Todos os direitos reservados.</p>
+    <span class="status-dot">Oliveira Apply AI · Next.js · SaaS</span>
+  </div>
+</footer>
+
+<div class="image-modal" id="imageModal"><span class="close-modal">&times;</span><img id="modalImage" src="" alt="" /></div>
+<script src="oliveira-apply-ai.translations.js"></script>
+<script src="../main.js"></script>
+</body>
+</html>

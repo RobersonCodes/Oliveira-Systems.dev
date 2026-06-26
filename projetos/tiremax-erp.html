@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TireMax ERP — ERP Multi-Tenant para Borracharias | Oliveira Systems</title>
+  <meta name="description" content="TireMax ERP — sistema de gestão multi-tenant para redes de borracharias, com automação via WhatsApp e painel SuperAdmin." />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+<div id="scrollBar"></div>
+
+<header class="header">
+  <nav class="nav container">
+    <a href="../index.html" class="brand">
+      <span class="brand-mark"></span>
+      <span>Oliveira Systems</span>
+    </a>
+    <div class="nav-right">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html#about" data-i18n="nav_about">Sobre</a></li>
+        <li><a href="../index.html#services" data-i18n="nav_services">Serviços</a></li>
+        <li><a href="../index.html#projects" data-i18n="nav_projects">Projetos</a></li>
+        <li><a href="../index.html#contact" class="nav-cta" data-i18n="nav_contact">Falar comigo</a></li>
+      </ul>
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="pt">PT</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+      <button class="menu-btn" id="menuBtn" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <section class="startup-hero startup-hero--tiremax">
+    <div class="container startup-hero-grid">
+      <div class="startup-copy">
+        <span class="section-label">React · Node.js · Multi-Tenant · ERP</span>
+        <h1>TireMax ERP</h1>
+        <p data-i18n="t_intro">Sistema de gestão multi-tenant para redes de borracharias — estoque, vendas, automação de atendimento via WhatsApp e um painel SuperAdmin para operar múltiplas lojas a partir de uma única base.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://github.com/RobersonCodes/tiremax-erp" target="_blank" rel="noopener" data-i18n="btn_github">Ver no GitHub</a>
+          <a class="btn btn-outline" href="../index.html#projects" data-i18n="btn_back">← Voltar aos projetos</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="startup-metrics-section">
+    <div class="container startup-metrics">
+      <div><strong data-i18n="t_m1t">Multi-tenant</strong><span data-i18n="t_m1">Múltiplas lojas, uma base</span></div>
+      <div><strong>WhatsApp</strong><span data-i18n="t_m2">Automação via Evolution API</span></div>
+      <div><strong data-i18n="t_m3t">SuperAdmin</strong><span data-i18n="t_m3">Painel de operação central</span></div>
+      <div><strong data-i18n="t_m4t">Produção</strong><span data-i18n="t_m4">Em uso real por lojas</span></div>
+    </div>
+  </section>
+
+  <section class="section dark-section">
+    <div class="container case-grid">
+      <article class="case-card">
+        <span class="section-label" data-i18n="t_challenge_label">Desafio</span>
+        <h2 data-i18n="t_challenge_h">Gerenciar estoque e vendas de várias lojas exige mais do que uma planilha por filial.</h2>
+        <p data-i18n="t_challenge_p">Redes de borracharias costumam operar com controles manuais ou sistemas isolados por loja, sem visão consolidada nem automação de atendimento. O desafio era construir um ERP que isolasse os dados de cada loja com segurança, mas permitisse uma visão central de operação.</p>
+      </article>
+      <article class="case-card">
+        <span class="section-label" data-i18n="t_solution_label">Solução</span>
+        <h2 data-i18n="t_solution_h">Multi-tenant real, automação de atendimento e um painel central para administrar tudo.</h2>
+        <p data-i18n="t_solution_p">O TireMax ERP isola dados por tenant a nível de banco, com cada loja operando de forma independente sobre a mesma infraestrutura. A automação de atendimento via WhatsApp (Evolution API, rodando em VPS própria) cobre confirmações e notificações sem intervenção manual, com Resend cuidando do envio de e-mails. Um painel SuperAdmin permite acompanhar e operar todas as lojas a partir de um único lugar.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <span class="section-label" data-i18n="t_tech_label">Tecnologias</span>
+      <h2 class="center-title" data-i18n="t_tech_h">Stack</h2>
+      <div class="cards">
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
+          <h3>Node.js + Prisma</h3>
+          <p data-i18n="t_tech1_p">API em Express com Prisma sobre PostgreSQL, hospedada no Railway, com isolamento de dados por tenant.</p>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 17l5-5-5-5M11 19h9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>React + Vite + Tailwind</h3>
+          <p data-i18n="t_tech2_p">Frontend hospedado na Vercel, com interface responsiva para uso no balcão de atendimento.</p>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
+          <h3>WhatsApp via Evolution API</h3>
+          <p data-i18n="t_tech3_p">Automação de mensagens e confirmações rodando em uma VPS própria na Hostinger, sem depender de serviços de terceiros.</p>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 5v14c0 1.66 3.58 3 8 3s8-1.34 8-3V5" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
+          <h3>Multi-tenancy</h3>
+          <p data-i18n="t_tech4_p">Cada loja opera isolada sobre a mesma base de dados, com regras de acesso que impedem cruzamento de informações entre tenants.</p>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M3 3v18h18M7 14l4-4 4 3 5-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>Painel SuperAdmin</h3>
+          <p data-i18n="t_tech5_p">Visão consolidada de todas as lojas, permitindo operação e suporte central sem acessar cada tenant individualmente.</p>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M3 8l9-5 9 5-9 5-9-5zM3 8v8l9 5 9-5V8" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
+          <h3>Resend</h3>
+          <p data-i18n="t_tech6_p">Envio de e-mails transacionais — confirmações, recibos e notificações administrativas.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section dark-section">
+    <div class="container case-result" style="margin:0 auto;">
+      <span class="section-label" data-i18n="t_outcome_label">Resultado</span>
+      <h2 data-i18n="t_outcome_h">Um ERP multi-tenant em uso real, automatizando atendimento de ponta a ponta.</h2>
+      <p data-i18n="t_outcome_p">O TireMax ERP demonstra capacidade de projetar arquitetura multi-tenant de verdade — não só múltiplos clientes na mesma tabela, mas isolamento real de dados, automação de atendimento via WhatsApp e um painel central de operação. É um sistema B2B em produção, resolvendo um problema operacional real de redes de borracharias.</p>
+      <div class="hero-actions" style="justify-content:center;margin-top:36px;">
+        <a class="btn btn-primary" href="https://github.com/RobersonCodes/tiremax-erp" target="_blank" rel="noopener" data-i18n="btn_repo">Ver repositório</a>
+        <a class="btn btn-outline" href="../index.html#projects" data-i18n="btn_all">← Todos os projetos</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer-page">
+  <div class="container footer-bottom-page">
+    <p data-i18n="footer_copy">© 2026 Oliveira Systems — Todos os direitos reservados.</p>
+    <span class="status-dot">TireMax ERP · Multi-Tenant · SaaS</span>
+  </div>
+</footer>
+
+<div class="image-modal" id="imageModal"><span class="close-modal">&times;</span><img id="modalImage" src="" alt="" /></div>
+<script src="tiremax-erp.translations.js"></script>
+<script src="../main.js"></script>
+</body>
+</html>

@@ -1,122 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ViaLivre AI | Oliveira Systems</title>
-  <meta name="description" content="ViaLivre AI — Intelligent urban mobility platform using AI for route analysis, schedule optimization, and real-time decision support." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <title>ViaLivre AI — App Mobile | Oliveira Systems</title>
+  <meta name="description" content="ViaLivre AI — app mobile React Native/Expo com IA para rotas, alertas de melhor horário e histórico de trajetos." />
   <link rel="stylesheet" href="../style.css" />
 </head>
 <body>
 <div id="scrollBar"></div>
-<!-- Brand watermarks -->
-<div class="brand-watermark" aria-hidden="true"><img src="../Imagens/Banner_Fundo.png" alt="" /></div>
-<div class="wm-corner wm-tl" aria-hidden="true"><img src="../Imagens/Banner_Fundo.png" alt="" /></div>
-
-<div class="cursor-glow"></div>
-<div class="animated-bg" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
 
 <header class="header">
   <nav class="nav container">
-    <a href="../index.html" class="brand"><span class="brand-icon"><img src="../Imagens/Banner_Fundo.png" alt="OS Logo" /></span><span>Oliveira Systems</span></a>
+    <a href="../index.html" class="brand">
+      <span class="brand-mark"></span>
+      <span>Oliveira Systems</span>
+    </a>
     <div class="nav-right">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html#about" data-i18n="nav_about">Sobre</a></li>
+        <li><a href="../index.html#services" data-i18n="nav_services">Serviços</a></li>
+        <li><a href="../index.html#projects" data-i18n="nav_projects">Projetos</a></li>
+        <li><a href="../index.html#contact" class="nav-cta" data-i18n="nav_contact">Falar comigo</a></li>
+      </ul>
       <div class="lang-switcher">
         <button class="lang-btn active" data-lang="pt">PT</button>
         <button class="lang-btn" data-lang="en">EN</button>
       </div>
-      <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+      <button class="menu-btn" id="menuBtn" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-    <div class="nav-right"><ul class="nav-links" id="navLinks">
-      <li><a href="../index.html#about">About</a></li>
-      <li><a href="../index.html#services">Services</a></li>
-      <li><a href="../index.html#projects">Projects</a></li>
-      <li><a href="../index.html#contact" class="nav-cta">Get in Touch</a></li>
-    </ul>
   </nav>
 </header>
 
 <main>
 
-  <section class="startup-hero">
+  <section class="startup-hero startup-hero--vialivre">
     <div class="container startup-hero-grid">
       <div class="startup-copy">
-        <span class="section-label">AI · Routing · Urban Mobility</span>
+        <span class="section-label" data-i18n="v_eyebrow">React Native · Expo · IA · Mobile</span>
         <h1>ViaLivre AI</h1>
-        <p>An intelligent urban-mobility platform applying AI to route analysis, schedule recommendations, and real-time decision support — making city movement smarter.</p>
+        <p data-i18n="v_intro">App mobile nativo (Android/iOS) que aprende suas rotas e avisa o melhor horário para saída — com mapa visual, histórico de trajetos e notificações push, construído sobre uma API própria que cruza dados de trânsito em tempo real.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="https://github.com/RobersonCodes" target="_blank" rel="noopener">View on GitHub</a>
-          <a class="btn btn-outline" href="../index.html#projects">← Back to Projects</a>
+          <a class="btn btn-primary" href="https://github.com/RobersonCodes/vialivre-ai" target="_blank" rel="noopener" data-i18n="btn_github">Ver no GitHub</a>
+          <a class="btn btn-outline" href="../index.html#projects" data-i18n="btn_back">← Voltar aos projetos</a>
         </div>
-      </div>
-      <div class="startup-banner">
-        <img class="zoomable-image" src="../Imagens/Via_Livre_AI.jpg" alt="ViaLivre AI Platform" />
       </div>
     </div>
   </section>
 
   <section class="startup-metrics-section">
     <div class="container startup-metrics">
-      <div><strong>AI</strong><span>Route Intelligence</span></div>
-      <div><strong>Real‑time</strong><span>Data Processing</span></div>
-      <div><strong>Node.js</strong><span>Backend Engine</span></div>
-      <div><strong>REST</strong><span>API-Driven</span></div>
+      <div><strong>5</strong><span data-i18n="v_m1">Telas nativas</span></div>
+      <div><strong data-i18n="v_m2t">Push</strong><span data-i18n="v_m2">Alertas de melhor horário</span></div>
+      <div><strong>Expo</strong><span data-i18n="v_m3">Build Android/iOS</span></div>
+      <div><strong>API</strong><span data-i18n="v_m4">Própria + dados de trânsito</span></div>
     </div>
   </section>
 
   <section class="section dark-section">
     <div class="container case-grid">
       <article class="case-card">
-        <span class="section-label">Problem</span>
-        <h2>Urban mobility is complex — manual planning can't keep up.</h2>
-        <p>Cities generate massive amounts of movement data. Without intelligent processing, route planning remains slow, inefficient, and unable to adapt to real-time conditions.</p>
+        <span class="section-label" data-i18n="v_problem_label">Problema</span>
+        <h2 data-i18n="v_problem_h">Saber o melhor horário pra sair exige checar trânsito manualmente todo dia.</h2>
+        <p data-i18n="v_problem_p">A maioria dos apps de mapa mostra o trânsito de agora, mas não aprende seus trajetos recorrentes nem avisa proativamente antes de você precisar sair de casa.</p>
       </article>
       <article class="case-card">
-        <span class="section-label">Solution</span>
-        <h2>AI-driven analysis that turns data into mobility decisions.</h2>
-        <p>ViaLivre AI processes route data, applies machine-learning models for schedule optimization, and surfaces actionable recommendations through a clean, API-first interface.</p>
+        <span class="section-label" data-i18n="v_solution_label">Solução</span>
+        <h2 data-i18n="v_solution_h">Um app nativo que conhece suas rotas e avisa antes de você perguntar.</h2>
+        <p data-i18n="v_solution_p">O ViaLivre AI guarda rotas favoritas, cruza dados de trânsito em tempo real via APIs de mapas e dispara uma notificação push com o melhor horário de saída — com mapa visual e histórico de trajetos direto no app.</p>
       </article>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
-      <span class="section-label">Technologies</span>
-      <h2 class="center-title">Stack</h2>
+      <span class="section-label" data-i18n="v_tech_label">Tecnologias</span>
+      <h2 class="center-title" data-i18n="v_tech_h">Stack</h2>
       <div class="cards">
-        <article class="card"><div class="icon">JS</div><h3>Node.js</h3><p>Asynchronous backend handling real-time data streams and API integrations.</p></article>
-        <article class="card"><div class="icon">🧠</div><h3>AI Models</h3><p>Applied intelligence for route scoring, schedule prediction, and anomaly detection.</p></article>
-        <article class="card"><div class="icon">API</div><h3>REST APIs</h3><p>Clean API surface exposing mobility data to frontend and third-party consumers.</p></article>
-        <article class="card"><div class="icon">UX</div><h3>Data-Driven UX</h3><p>Interface decisions driven entirely by real route and schedule analytics.</p></article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><line x1="11" y1="18" x2="13" y2="18" stroke="currentColor" stroke-width="2"/></svg></div>
+          <h3>React Native + Expo</h3>
+          <p data-i18n="v_tech1_p">App nativo para Android e iOS a partir de uma única base de código, com build e deploy gerenciados via Expo.</p>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
+          <h3>Node.js + Prisma</h3>
+          <p data-i18n="v_tech2_p">API própria em Node.js com Prisma sobre PostgreSQL, persistindo rotas favoritas, histórico e perfis de usuário.</p>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M3 17l5-5 4 4 8-8M14 8h6v6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3 data-i18n="v_tech3_h">Dados de trânsito em tempo real</h3>
+          <p data-i18n="v_tech3_p">A API própria cruza serviços externos de mapas e trânsito para calcular o impacto real no tempo de trajeto.</p>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.73 21a2 2 0 01-3.46 0" stroke="currentColor" stroke-width="2"/></svg></div>
+          <h3 data-i18n="v_tech4_h">Notificações push</h3>
+          <p data-i18n="v_tech4_p">Alertas nativos avisando o melhor horário de saída antes de você precisar checar o app.</p>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l5.447 2.724A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
+          <h3 data-i18n="v_tech5_h">Mapa e histórico</h3>
+          <p data-i18n="v_tech5_p">Visualização de rota em tela e histórico de trajetos salvos, com múltiplas rotas favoritas por usuário.</p>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 21v-1a8 8 0 0116 0v1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+          <h3 data-i18n="v_tech6_h">Login e perfil</h3>
+          <p data-i18n="v_tech6_p">Autenticação e perfil de usuário — cada pessoa com suas próprias rotas, histórico e preferências.</p>
+        </article>
       </div>
     </div>
   </section>
 
   <section class="section dark-section">
     <div class="container case-result" style="margin:0 auto;">
-      <span class="section-label">Outcome</span>
-      <h2>A showcase of AI applied to a real-world urban challenge.</h2>
-      <p>ViaLivre AI demonstrates the ability to integrate machine-learning thinking into backend systems — from data ingestion and processing, to intelligent recommendation delivery via well-designed APIs.</p>
+      <span class="section-label" data-i18n="v_outcome_label">Resultado</span>
+      <h2 data-i18n="v_outcome_h">Da API de horários a um app mobile completo, em build para Android e iOS.</h2>
+      <p data-i18n="v_outcome_p">O ViaLivre AI evoluiu de uma API de recomendação de horários para um produto mobile de ponta a ponta — login, mapa, histórico, rotas favoritas e notificações push, tudo sobre uma base full-stack própria. Ainda em build via Expo, a caminho das lojas.</p>
       <div class="hero-actions" style="justify-content:center;margin-top:36px;">
-        <a class="btn btn-primary" href="https://github.com/RobersonCodes" target="_blank" rel="noopener">View Repository</a>
-        <a class="btn btn-outline" href="../index.html#projects">← All Projects</a>
+        <a class="btn btn-primary" href="https://github.com/RobersonCodes/vialivre-ai" target="_blank" rel="noopener" data-i18n="btn_repo">Ver repositório</a>
+        <a class="btn btn-outline" href="../index.html#projects" data-i18n="btn_all">← Todos os projetos</a>
       </div>
     </div>
   </section>
 
 </main>
 
-<footer class="footer">
-  <div class="footer-wm" aria-hidden="true"><img src="../Imagens/Banner_Fundo.png" alt="" /></div>
-  <div class="container footer-bottom">
-    <p>© 2026 Oliveira Systems — All rights reserved.</p>
-    <span class="status-dot">ViaLivre AI · Node.js · AI Product</span>
+<footer class="footer-page">
+  <div class="container footer-bottom-page">
+    <p data-i18n="footer_copy">© 2026 Oliveira Systems — Todos os direitos reservados.</p>
+    <span class="status-dot">ViaLivre AI · React Native · Mobile</span>
   </div>
 </footer>
 
 <div class="image-modal" id="imageModal"><span class="close-modal">&times;</span><img id="modalImage" src="" alt="" /></div>
+<script src="vialivre.translations.js"></script>
 <script src="../main.js"></script>
 </body>
 </html>

@@ -1,289 +1,276 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Oliveira Systems | Backend Engineering & APIs</title>
-  <meta name="description" content="Oliveira Systems — Engenharia backend, APIs REST, Java & Node.js, integração com IA e arquitetura escalável para clientes globais." />
-  <meta property="og:title"       content="Oliveira Systems | Backend Engineering & APIs" />
-  <meta property="og:description" content="Enterprise backend engineering, REST APIs, AI integration. Built for global clients." />
-  <meta property="og:image"       content="Imagens/Banner_Fundo.png" />
-  <meta property="og:type"        content="website" />
-  <meta name="twitter:card"       content="summary_large_image" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Oliveira Systems | Full-Stack Engineering & APIs</title>
+<meta name="description" content="Oliveira Systems — Engenharia full-stack: backend resiliente, monitoramento, recuperação de desastre e interfaces construídas para não falhar sob pressão." />
+<meta property="og:title" content="Oliveira Systems | Full-Stack Engineering & APIs" />
+<meta property="og:description" content="Sistemas completos, do banco de dados à tela, que não falham sob pressão. Java, Node.js, React e arquitetura escalável." />
+<meta property="og:type" content="website" />
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<!-- Scroll progress -->
 <div id="scrollBar"></div>
 
-<!-- Brand watermark layers -->
-<div class="brand-watermark" aria-hidden="true">
-  <img src="Imagens/Banner_Fundo.png" alt="" />
-</div>
-<div class="wm-corner wm-tl" aria-hidden="true"><img src="Imagens/Banner_Fundo.png" alt="" /></div>
-<div class="wm-corner wm-br" aria-hidden="true"><img src="Imagens/Banner_Fundo.png" alt="" /></div>
-
-<!-- Cursor glow -->
-<div class="cursor-glow"></div>
-
-<!-- Animated lines -->
-<div class="animated-bg" aria-hidden="true">
-  <span></span><span></span><span></span><span></span><span></span>
-</div>
-
-<!-- ─── HEADER ─── -->
-<header class="header">
+<header class="header" id="header">
   <nav class="nav container">
     <a href="#home" class="brand">
-      <span class="brand-icon"><img src="Imagens/Banner_Fundo.png" alt="Oliveira Systems Logo" /></span>
+      <span class="brand-mark"></span>
       <span>Oliveira Systems</span>
     </a>
     <div class="nav-right">
       <ul class="nav-links" id="navLinks">
-        <li><a href="#about"    data-i18n="nav_about">Sobre</a></li>
+        <li><a href="#about" data-i18n="nav_about">Sobre</a></li>
         <li><a href="#services" data-i18n="nav_services">Serviços</a></li>
         <li><a href="#projects" data-i18n="nav_projects">Projetos</a></li>
-        <li><a href="#stack"    data-i18n="nav_stack">Stack</a></li>
-        <li><a href="#contact"  class="nav-cta" data-i18n="nav_contact">Entrar em Contato</a></li>
+        <li><a href="#stack" data-i18n="nav_stack">Stack</a></li>
+        <li><a href="#contact" class="nav-cta" data-i18n="nav_contact">Falar comigo</a></li>
       </ul>
       <div class="lang-switcher">
         <button class="lang-btn active" data-lang="pt">PT</button>
-        <button class="lang-btn"        data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="en">EN</button>
       </div>
-      <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+      <button class="menu-btn" id="menuBtn" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </nav>
 </header>
 
 <main>
 
-<!-- ════ HERO ════ -->
 <section id="home" class="hero section">
-  <div class="container hero-inner">
-    <div class="hero-content">
-      <div class="hero-eyebrow">
-        <span class="hero-dot"></span>
-        <span data-i18n="hero_badge">Disponível para novos projetos</span>
-      </div>
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <div class="eyebrow"><span class="px"></span><span data-i18n="hero_badge">SISTEMA OPERACIONAL</span></div>
       <h1>
-        <span data-i18n="hero_h1a">Sistemas backend</span><br>
-        <span data-i18n="hero_h1b">construídos para escalar.</span>
+        <span data-i18n="hero_h1a">Do banco de dados</span><br>
+        <span data-i18n="hero_h1b">à tela: sistemas</span><br>
+        <span class="accent" data-i18n="hero_h1c">que não falham.</span>
       </h1>
-      <p class="hero-sub" data-i18n="hero_sub">APIs enterprise, arquitetura limpa e integração com IA — engenharia com precisão para times que exigem confiabilidade.</p>
-      <div class="hero-chips">
-        <span>Java &amp; Spring Boot</span>
-        <span>Node.js</span>
-        <span>REST APIs</span>
-        <span>AI Integration</span>
-        <span>JWT Security</span>
-      </div>
+      <p class="hero-sub" data-i18n="hero_sub">Backend resiliente, interfaces que funcionam de verdade e monitoramento ativo — construído por quem entende o sistema de ponta a ponta, da query ao clique.</p>
       <div class="hero-actions">
-        <a href="#projects" class="btn btn-primary" data-i18n="hero_btn1">Explorar Projetos</a>
-        <a href="#contact"  class="btn btn-outline"  data-i18n="hero_btn2">Agendar Projeto</a>
+        <a href="#projects" class="btn btn-primary" data-i18n="hero_btn1">Ver projetos →</a>
+        <a href="#contact" class="btn btn-outline" data-i18n="hero_btn2">Falar comigo</a>
       </div>
-      <div class="hero-stats">
-        <div class="stat-card">
-          <strong data-i18n="stat1_title">REST APIs</strong>
-          <span   data-i18n="stat1_sub">Arquitetura escalável</span>
-        </div>
-        <div class="stat-card">
-          <strong data-i18n="stat2_title">IA Aplicada</strong>
-          <span   data-i18n="stat2_sub">Automação inteligente</span>
-        </div>
-        <div class="stat-card">
-          <strong data-i18n="stat3_title">Performance</strong>
-          <span   data-i18n="stat3_sub">Backend otimizado</span>
-        </div>
+      <div class="meta-row">
+        <div class="meta-item"><b>99.9%</b><span data-i18n="meta1">UPTIME MÉDIO</span></div>
+        <div class="meta-item"><b>14+</b><span data-i18n="meta2">SISTEMAS EM PRODUÇÃO</span></div>
+        <div class="meta-item"><b>&lt;200ms</b><span data-i18n="meta3">LATÊNCIA P95</span></div>
       </div>
-    </div>
-
-    <div class="hero-visual">
-      <div class="hero-panel">
-        <div class="panel-bar">
-          <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
-          <span class="panel-title">oliveira-systems.dev</span>
-        </div>
-        <div class="panel-logo-row">
-          <img src="Imagens/Banner_Fundo.png" alt="OS logo" />
-          <span>Oliveira Systems</span>
-        </div>
-        <div class="panel-grid">
-          <div class="metric"><small>API STATUS</small><strong>ONLINE</strong></div>
-          <div class="metric"><small>UPTIME</small><strong>99.9%</strong></div>
-          <div class="metric"><small>STACK</small><strong>JAVA · NODE</strong></div>
-          <div class="metric"><small>AUTH</small><strong>JWT ACTIVE</strong></div>
-        </div>
-        <div class="panel-terminal"><span id="typeText"></span></div>
-      </div>
-      <div class="panel-glow"></div>
     </div>
   </div>
 </section>
 
-<!-- ════ ABOUT ════ -->
 <section id="about" class="section dark-section">
+
   <div class="container about-grid">
     <div class="about-img-wrap">
-      <img src="Imagens/Minha_Imagem.png" alt="Roberson de Oliveira" />
+      <img src="Imagens/optimized/Minha_Imagem.webp" alt="Roberson de Oliveira" />
       <div class="about-badge">// roberson.dev</div>
     </div>
     <div class="about-text">
-      <span class="section-label" data-i18n="about_label">Sobre</span>
-      <h2 data-i18n="about_h2">Engenharia de software que performa em qualquer escala.</h2>
-      <p class="about-lead" data-i18n="about_lead">Sou Roberson de Oliveira, engenheiro backend focado em sistemas robustos, APIs REST limpas e soluções com IA para negócios que precisam de confiabilidade.</p>
-      <p data-i18n="about_p1">Com base em Java e Node.js, projeto aplicações seguras, manuteníveis e prontas para crescer — aplicando padrões enterprise desde o início.</p>
-      <p data-i18n="about_p2">A Oliveira Systems nasceu com o propósito de desenvolver tecnologia que resolve problemas reais com arquitetura sólida, escalabilidade e confiabilidade.</p>
-      <div class="about-divider" data-i18n="about_divider">aberto para trabalho remoto &amp; clientes globais</div>
+      <span class="section-label" data-i18n="about_label">SOBRE</span>
+      <h2 data-i18n="about_h2">Engenharia que continua funcionando quando tudo dá errado.</h2>
+      <p class="about-lead" data-i18n="about_lead">Sou Roberson de Oliveira, engenheiro full-stack focado em sistemas completos — do banco de dados à interface — que sobrevivem a picos de carga, falhas de rede e o caos real de produção.</p>
+      <p data-i18n="about_p1">Com base em Java, Node.js e React, projeto aplicações com monitoramento ativo, recuperação automática e interfaces que não escondem a complexidade do usuário.</p>
+      <p data-i18n="about_p2">A Oliveira Systems existe para um propósito simples: sistemas completos que não acordam você de madrugada.</p>
+      <div class="about-divider" data-i18n="about_divider">aberto para trabalho remoto & clientes globais</div>
       <div class="social-row">
-        <a href="https://github.com/RobersonCodes"                            target="_blank" rel="noopener" class="social-btn">⌥ GitHub</a>
-        <a href="https://www.linkedin.com/in/roberson-de-oliveira-tecnologia" target="_blank" rel="noopener" class="social-btn">in LinkedIn</a>
-        <a href="mailto:roberson_sl@hotmail.com"                              class="social-btn">✉ Email</a>
+        <a href="https://github.com/RobersonCodes" target="_blank" rel="noopener" class="social-btn">GitHub</a>
+        <a href="https://www.linkedin.com/in/roberson-de-oliveira-tecnologia" target="_blank" rel="noopener" class="social-btn">LinkedIn</a>
+        <a href="mailto:roberson_sl@hotmail.com" class="social-btn">Email</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ════ SKILLS ════ -->
 <section class="skills-section">
   <div class="container">
-    <span class="section-label" data-i18n="skills_label">Proficiência</span>
-    <h2 class="center-title" data-i18n="skills_h2">Profundidade técnica em todo o stack backend</h2>
+    <span class="section-label" data-i18n="skills_label">PROFICIÊNCIA</span>
+    <h2 class="center-title" data-i18n="skills_h2">Profundidade técnica do banco de dados à interface</h2>
     <div class="skills-grid">
       <div class="skill-group">
         <h3 data-i18n="skills_g1">Backend & APIs</h3>
         <div class="skill-row"><div class="skill-label"><span>Java 17 / Spring Boot</span><em>Advanced</em></div><div class="skill-track"><div class="skill-fill" data-w="88%"></div></div></div>
         <div class="skill-row"><div class="skill-label"><span>Node.js / Express</span><em>Advanced</em></div><div class="skill-track"><div class="skill-fill" data-w="85%"></div></div></div>
         <div class="skill-row"><div class="skill-label"><span>REST API Design</span><em>Expert</em></div><div class="skill-track"><div class="skill-fill" data-w="92%"></div></div></div>
-        <div class="skill-row"><div class="skill-label"><span>JWT Authentication</span><em>Advanced</em></div><div class="skill-track"><div class="skill-fill" data-w="87%"></div></div></div>
+        <div class="skill-row"><div class="skill-label"><span>AI Integration (OpenAI / Claude)</span><em>Advanced</em></div><div class="skill-track"><div class="skill-fill" data-w="84%"></div></div></div>
       </div>
       <div class="skill-group">
         <h3 data-i18n="skills_g2">Dados & Infraestrutura</h3>
-        <div class="skill-row"><div class="skill-label"><span>MySQL / SQLite</span><em>Advanced</em></div><div class="skill-track"><div class="skill-fill" data-w="84%"></div></div></div>
-        <div class="skill-row"><div class="skill-label"><span>Clean Architecture</span><em>Advanced</em></div><div class="skill-track"><div class="skill-fill" data-w="86%"></div></div></div>
-        <div class="skill-row"><div class="skill-label"><span>AI Integration</span><em>Intermediate</em></div><div class="skill-track"><div class="skill-fill" data-w="72%"></div></div></div>
-        <div class="skill-row"><div class="skill-label"><span>Git / GitHub</span><em>Advanced</em></div><div class="skill-track"><div class="skill-fill" data-w="90%"></div></div></div>
+        <div class="skill-row"><div class="skill-label"><span>MySQL / PostgreSQL</span><em>Advanced</em></div><div class="skill-track"><div class="skill-fill" data-w="84%"></div></div></div>
+        <div class="skill-row"><div class="skill-label"><span>Prisma ORM</span><em>Advanced</em></div><div class="skill-track"><div class="skill-fill" data-w="86%"></div></div></div>
+        <div class="skill-row"><div class="skill-label"><span>Monitoramento & Recovery</span><em>Advanced</em></div><div class="skill-track"><div class="skill-fill" data-w="86%"></div></div></div>
+        <div class="skill-row"><div class="skill-label"><span>Git / GitHub Actions</span><em>Advanced</em></div><div class="skill-track"><div class="skill-fill" data-w="90%"></div></div></div>
+      </div>
+      <div class="skill-group">
+        <h3 data-i18n="skills_g3">Frontend & Mobile</h3>
+        <div class="skill-row"><div class="skill-label"><span>React 18 / Vite</span><em>Advanced</em></div><div class="skill-track"><div class="skill-fill" data-w="87%"></div></div></div>
+        <div class="skill-row"><div class="skill-label"><span>TypeScript</span><em>Advanced</em></div><div class="skill-track"><div class="skill-fill" data-w="85%"></div></div></div>
+        <div class="skill-row"><div class="skill-label"><span>React Native / Expo</span><em>Intermediate</em></div><div class="skill-track"><div class="skill-fill" data-w="75%"></div></div></div>
+        <div class="skill-row"><div class="skill-label"><span>Tailwind / Zustand</span><em>Advanced</em></div><div class="skill-track"><div class="skill-fill" data-w="83%"></div></div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ════ COUNTERS ════ -->
 <section class="counters-section dark-section">
   <div class="container">
-    <span class="section-label" data-i18n="counters_label">Impacto</span>
-    <h2 class="center-title" data-i18n="counters_h2">Números que falam</h2>
+    <span class="section-label" data-i18n="counters_label">IMPACTO</span>
+    <h2 class="center-title" data-i18n="counters_h2">Métricas, não promessas</h2>
     <div class="counters-grid">
-      <div class="counter-card">
-        <div class="counter-number" id="c1">0+</div>
-        <div class="counter-label" data-i18n="c1_label">Soluções Entregues</div>
-      </div>
-      <div class="counter-card">
-        <div class="counter-number" id="c2">0+</div>
-        <div class="counter-label" data-i18n="c2_label">Endpoints de API</div>
-      </div>
-      <div class="counter-card">
-        <div class="counter-number" id="c3">0+</div>
-        <div class="counter-label" data-i18n="c3_label">Especialidades Técnicas</div>
-      </div>
-      <div class="counter-card">
-        <div class="counter-number" id="c4">0+</div>
-        <div class="counter-label" data-i18n="c4_label">Commits no GitHub</div>
-      </div>
+      <div class="counter-card"><div class="counter-number" id="c1">0+</div><div class="counter-label" data-i18n="c1_label">Soluções entregues</div></div>
+      <div class="counter-card"><div class="counter-number" id="c2">0+</div><div class="counter-label" data-i18n="c2_label">Endpoints de API</div></div>
+      <div class="counter-card"><div class="counter-number" id="c3">0+</div><div class="counter-label" data-i18n="c3_label">Especialidades técnicas</div></div>
+      <div class="counter-card"><div class="counter-number" id="c4">0+</div><div class="counter-label" data-i18n="c4_label">Commits no GitHub</div></div>
     </div>
   </div>
 </section>
 
-<!-- ════ SERVICES ════ -->
 <section id="services" class="section">
   <div class="container">
-    <span class="section-label" data-i18n="services_label">Serviços</span>
+    <span class="section-label" data-i18n="services_label">SERVIÇOS</span>
     <h2 class="center-title" data-i18n="services_h2">O que a Oliveira Systems entrega</h2>
-    <p class="services-subtitle" data-i18n="services_sub">Soluções backend end-to-end para performance, segurança e escala real.</p>
+    <p class="services-subtitle" data-i18n="services_sub">Soluções full-stack end-to-end para performance, segurança e escala real.</p>
     <div class="services-grid">
-      <div class="service-card"><div class="service-icon">&lt;/&gt;</div><h3 data-i18n="svc1_h">Sistemas Personalizados</h3><p data-i18n="svc1_p">Aplicações sob medida com separação de responsabilidades, da camada de dados à superfície da API.</p></div>
-      <div class="service-card"><div class="service-icon">▦</div><h3 data-i18n="svc2_h">Desenvolvimento de APIs</h3><p data-i18n="svc2_p">APIs RESTful projetadas para clareza, segurança e integração perfeita com qualquer frontend ou serviço.</p></div>
-      <div class="service-card"><div class="service-icon">🔒</div><h3 data-i18n="svc3_h">Segurança & Auth</h3><p data-i18n="svc3_p">JWT, rotas protegidas, validação de entrada e padrões de segurança enterprise.</p></div>
-      <div class="service-card"><div class="service-icon">↗</div><h3 data-i18n="svc4_h">Arquitetura Escalável</h3><p data-i18n="svc4_p">Sistemas projetados para crescer — camadas limpas, código manutenível, prontos para requisitos futuros.</p></div>
-      <div class="service-card"><div class="service-icon">🧠</div><h3 data-i18n="svc5_h">Integração com IA</h3><p data-i18n="svc5_p">Incorporando inteligência em produtos: automação, triagem inteligente e fluxos orientados a dados.</p></div>
-      <div class="service-card"><div class="service-icon">☁</div><h3 data-i18n="svc6_h">Integrações</h3><p data-i18n="svc6_p">Conectando sistemas via APIs confiáveis — serviços de terceiros, dados governamentais e ferramentas internas.</p></div>
+      <div class="service-card"><div class="service-icon"><svg viewBox="0 0 24 24"><path d="M4 17l6-6-6-6M12 19h8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3 data-i18n="svc1_h">Sistemas personalizados</h3><p data-i18n="svc1_p">Aplicações sob medida com separação de responsabilidades, da camada de dados à superfície da API.</p></div>
+      <div class="service-card"><div class="service-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 9h18M8 4v5" stroke="currentColor" stroke-width="2"/></svg></div><h3 data-i18n="svc6_h">Interfaces & Frontend</h3><p data-i18n="svc6_p">React e interfaces modernas conectadas diretamente à mesma API que serve o backend — sem gambiarra entre as camadas.</p></div>
+      <div class="service-card"><div class="service-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="14" y="3" width="7" height="7" rx="1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="14" width="7" height="7" rx="1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="14" y="14" width="7" height="7" rx="1" fill="none" stroke="currentColor" stroke-width="2"/></svg></div><h3 data-i18n="svc2_h">Desenvolvimento de APIs</h3><p data-i18n="svc2_p">APIs RESTful projetadas para clareza, segurança e integração perfeita com qualquer frontend ou serviço.</p></div>
+      <div class="service-card"><div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div><h3 data-i18n="svc3_h">Segurança & Auth</h3><p data-i18n="svc3_p">JWT, rotas protegidas, validação de entrada e padrões de segurança enterprise.</p></div>
+      <div class="service-card"><div class="service-icon"><svg viewBox="0 0 24 24"><path d="M3 17l5-5 4 4 8-8M14 8h6v6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3 data-i18n="svc4_h">Arquitetura escalável</h3><p data-i18n="svc4_p">Sistemas projetados para crescer — camadas limpas, código manutenível, prontos para requisitos futuros.</p></div>
+      <div class="service-card"><div class="service-icon"><svg viewBox="0 0 24 24"><path d="M2 12h4l2 7 4-14 3 7h7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3 data-i18n="svc5_h">Monitoramento & Recovery</h3><p data-i18n="svc5_p">Health checks em tempo real, alertas automáticos e recuperação operacional sem intervenção manual.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ════ PROJECTS ════ -->
 <section id="projects" class="section dark-section">
   <div class="container">
-    <span class="section-label" data-i18n="projects_label">Projetos</span>
+    <span class="section-label" data-i18n="projects_label">PROJETOS</span>
     <h2 class="center-title" data-i18n="projects_h2">Sistemas reais, arquitetura profissional</h2>
-    <p class="services-subtitle" data-i18n="projects_sub">Cada projeto reflete comprometimento com profundidade backend, código limpo e padrões prontos para produção.</p>
+    <p class="services-subtitle" data-i18n="projects_sub">Cada projeto reflete comprometimento com profundidade técnica, código limpo e padrões prontos para produção, do backend à interface.</p>
     <div class="projects-grid">
       <article class="project-card">
         <div class="project-top"><span class="project-cat">Java · Spring Boot · MySQL</span><span class="project-badge">Enterprise</span></div>
         <h3 data-i18n="p1_h">Sistema de Saúde Municipal</h3>
-        <p  data-i18n="p1_p">API completa de gestão de saúde pública — pacientes, consultas, unidades de saúde e triagem com IA.</p>
+        <p data-i18n="p1_p">API completa de gestão de saúde pública — pacientes, consultas, unidades de saúde e triagem com IA.</p>
         <div class="tech-tags"><span>Java 17</span><span>Spring Boot</span><span>JWT</span><span>MySQL</span><span>Swagger</span></div>
-        <a href="./projetos/saude.html"   class="project-link" data-i18n="view_case">Ver estudo de caso →</a>
+        <a href="./projetos/saude.html" class="project-link" data-i18n="view_case">Ver estudo de caso →</a>
       </article>
       <article class="project-card featured">
         <div class="project-top"><span class="project-cat">Java · Monitoring · Disaster Recovery</span><span class="project-badge">Featured</span></div>
         <h3 data-i18n="p2_h">Guardian Recovery</h3>
-        <p  data-i18n="p2_p">Plataforma enterprise de monitoramento — health checks em tempo real, incidentes automáticos e recuperação operacional.</p>
+        <p data-i18n="p2_p">Plataforma enterprise de monitoramento — health checks em tempo real, incidentes automáticos e recuperação operacional.</p>
         <div class="tech-tags"><span>Spring Boot</span><span>JWT</span><span>MySQL</span><span>REST API</span><span>Incidents</span></div>
         <a href="./projetos/guardian.html" class="project-link" data-i18n="view_case">Ver estudo de caso →</a>
       </article>
       <article class="project-card">
-        <div class="project-top"><span class="project-cat">Node.js · Express · SQLite</span><span class="project-badge">Full Stack</span></div>
+        <div class="project-top"><span class="project-cat">React · Node.js · TypeScript · Prisma</span><span class="project-badge">Full Stack</span></div>
         <h3 data-i18n="p3_h">Minha Loja</h3>
-        <p  data-i18n="p3_p">E-commerce full-stack — autenticação JWT, painel administrativo, catálogo, favoritos e arquitetura em camadas.</p>
-        <div class="tech-tags"><span>Node.js</span><span>Express</span><span>SQLite</span><span>JWT</span><span>Admin Panel</span></div>
+        <p data-i18n="p3_p">E-commerce full-stack reescrito — checkout real via Stripe, avaliações verificadas no backend e 28 testes automatizados.</p>
+        <div class="tech-tags"><span>React 18</span><span>Prisma</span><span>MySQL</span><span>Stripe</span><span>Vitest</span></div>
         <a href="./projetos/minha-loja.html" class="project-link" data-i18n="view_case">Ver estudo de caso →</a>
       </article>
       <article class="project-card">
-        <div class="project-top"><span class="project-cat">AI · Routing · Urban Mobility</span><span class="project-badge">AI Product</span></div>
+        <div class="project-top"><span class="project-cat">React Native · Expo · Node.js</span><span class="project-badge">Mobile</span></div>
         <h3 data-i18n="p4_h">ViaLivre AI</h3>
-        <p  data-i18n="p4_p">Solução inteligente de mobilidade urbana com IA para análise de rotas e recomendação de horários.</p>
-        <div class="tech-tags"><span>Node.js</span><span>AI</span><span>APIs</span><span>UX</span><span>Data</span></div>
+        <p data-i18n="p4_p">App mobile nativo que aprende suas rotas e avisa o melhor horário de saída, com mapa, histórico e notificações push.</p>
+        <div class="tech-tags"><span>React Native</span><span>Expo</span><span>Prisma</span><span>PostgreSQL</span><span>Push</span></div>
         <a href="./projetos/vialivre.html" class="project-link" data-i18n="view_case">Ver estudo de caso →</a>
+      </article>
+      <article class="project-card">
+        <div class="project-top"><span class="project-cat">Next.js · Node.js · IA · SaaS</span><span class="project-badge">Live Billing</span></div>
+        <h3 data-i18n="p5_h">Oliveira Apply AI</h3>
+        <p data-i18n="p5_p">SaaS que automatiza busca e aplicação a vagas com IA — onboarding, busca multi-fonte e pagamento real via Stripe.</p>
+        <div class="tech-tags"><span>Next.js</span><span>GPT-4o-mini</span><span>Stripe</span><span>Redis</span><span>Prisma</span></div>
+        <a href="./projetos/oliveira-apply-ai.html" class="project-link" data-i18n="view_case">Ver estudo de caso →</a>
+      </article>
+      <article class="project-card">
+        <div class="project-top"><span class="project-cat">React · Node.js · Multi-Tenant</span><span class="project-badge">ERP</span></div>
+        <h3 data-i18n="p6_h">TireMax ERP</h3>
+        <p data-i18n="p6_p">ERP multi-tenant para redes de borracharias, com automação de atendimento via WhatsApp e painel SuperAdmin.</p>
+        <div class="tech-tags"><span>Multi-Tenant</span><span>WhatsApp</span><span>Prisma</span><span>PostgreSQL</span><span>SuperAdmin</span></div>
+        <a href="./projetos/tiremax-erp.html" class="project-link" data-i18n="view_case">Ver estudo de caso →</a>
+      </article>
+      <article class="project-card">
+        <div class="project-top"><span class="project-cat">PWA · Acadêmico · Senac</span><span class="project-badge">Social Impact</span></div>
+        <h3 data-i18n="p7_h">SAFEHER</h3>
+        <p data-i18n="p7_p">PWA acadêmico para apoio ao cumprimento de medidas protetivas, com geofencing, IA e modo de segurança discreto.</p>
+        <div class="tech-tags"><span>PWA</span><span>Geofencing</span><span>Claude AI</span><span>Web Push</span><span>Supabase</span></div>
+        <a href="./projetos/safeher.html" class="project-link" data-i18n="view_case">Ver estudo de caso →</a>
+      </article>
+      <article class="project-card">
+        <div class="project-top"><span class="project-cat">React · Firebase · Offline-First</span><span class="project-badge">CRM</span></div>
+        <h3 data-i18n="p8_h">CRM Comercial de Campo</h3>
+        <p data-i18n="p8_p">CRM para representantes de campo de marcas multinacionais — sell out, funil de vendas e exportação fiel a Excel, 100% offline.</p>
+        <div class="tech-tags"><span>React</span><span>Firebase</span><span>IndexedDB</span><span>Tailwind</span><span>xlsx</span></div>
+        <a href="./projetos/milwaukee-crm.html" class="project-link" data-i18n="view_case">Ver estudo de caso →</a>
+      </article>
+      <article class="project-card">
+        <div class="project-top"><span class="project-cat">HTML5 · Three.js · Motion</span><span class="project-badge">Em Andamento</span></div>
+        <h3 data-i18n="p9_h">AI Funnel Pro</h3>
+        <p data-i18n="p9_p">Landing page SaaS futurista com hero 3D em Three.js, glassmorphism e motion design cinematográfico.</p>
+        <div class="tech-tags"><span>Three.js</span><span>Canvas</span><span>Glassmorphism</span><span>CSS Modular</span><span>Vanilla JS</span></div>
+        <a href="./projetos/ai-funnel-pro.html" class="project-link" data-i18n="view_case">Ver estudo de caso →</a>
+      </article>
+      <article class="project-card">
+        <div class="project-top"><span class="project-cat">HTML5 · CSS3 · JavaScript</span><span class="project-badge">Cliente Real</span></div>
+        <h3 data-i18n="p10_h">Barbermem</h3>
+        <p data-i18n="p10_p">Site institucional premium para barbearia real, com agendamento direto via WhatsApp, planos e galeria.</p>
+        <div class="tech-tags"><span>HTML5</span><span>CSS3</span><span>WhatsApp</span><span>Responsivo</span><span>Maps</span></div>
+        <a href="./projetos/barbermem.html" class="project-link" data-i18n="view_case">Ver estudo de caso →</a>
+      </article>
+      <article class="project-card">
+        <div class="project-top"><span class="project-cat">Java · Swing · MySQL</span><span class="project-badge">Desktop</span></div>
+        <h3 data-i18n="p11_h">Gerenciador de Tarefas</h3>
+        <p data-i18n="p11_p">Aplicação desktop em Java Swing com login via BCrypt, arquitetura MVC e persistência em MySQL via JDBC.</p>
+        <div class="tech-tags"><span>Java 17</span><span>Swing</span><span>BCrypt</span><span>JDBC</span><span>MVC</span></div>
+        <a href="./projetos/task-manager-java.html" class="project-link" data-i18n="view_case">Ver estudo de caso →</a>
+      </article>
+      <article class="project-card">
+        <div class="project-top"><span class="project-cat">Node.js · TypeScript · Prisma</span><span class="project-badge">REST API</span></div>
+        <h3 data-i18n="p12_h">Task Manager API</h3>
+        <p data-i18n="p12_p">API REST em arquitetura de camadas, com Prisma, validação Zod, 29 testes automatizados, Docker e CI.</p>
+        <div class="tech-tags"><span>TypeScript</span><span>Prisma</span><span>Zod</span><span>Vitest</span><span>Docker</span></div>
+        <a href="./projetos/task-manager-api.html" class="project-link" data-i18n="view_case">Ver estudo de caso →</a>
       </article>
     </div>
   </div>
 </section>
 
-<!-- ════ STACK ════ -->
 <section id="stack" class="section">
   <div class="container">
-    <span class="section-label" data-i18n="stack_label">Stack Tecnológica</span>
+    <span class="section-label" data-i18n="stack_label">STACK TECNOLÓGICA</span>
     <h2 class="center-title" data-i18n="stack_h2">Tecnologias usadas em sistemas de produção</h2>
-    <p class="services-subtitle" data-i18n="stack_sub">Ferramentas, frameworks e padrões aplicados em projetos reais.</p>
+    <p class="services-subtitle" data-i18n="stack_sub">Ferramentas, frameworks e padrões aplicados em projetos reais, do banco de dados à interface.</p>
     <div class="stack-grid">
-      <div class="stack-card"><h3>Java</h3><p>APIs enterprise, arquitetura robusta e aplicações escaláveis de alta performance.</p></div>
-      <div class="stack-card"><h3>Spring Boot</h3><p>Backend moderno com segurança, performance e organização out of the box.</p></div>
-      <div class="stack-card"><h3>Node.js</h3><p>APIs REST rápidas, integrações e sistemas JavaScript modernos.</p></div>
-      <div class="stack-card"><h3>JWT Auth</h3><p>Autenticação stateless e segura para APIs e sistemas distribuídos.</p></div>
-      <div class="stack-card"><h3>MySQL &amp; SQLite</h3><p>Modelagem relacional e persistência de dados para aplicações reais.</p></div>
-      <div class="stack-card"><h3>AI Integration</h3><p>Inteligência aplicada para automação, análise e decisão inteligente.</p></div>
-      <div class="stack-card"><h3>REST APIs</h3><p>Design orientado a padrões para comunicação confiável entre serviços.</p></div>
-      <div class="stack-card"><h3>Git &amp; GitHub</h3><p>Versionamento profissional e gestão estruturada de projetos.</p></div>
+      <div class="stack-card"><h3>Java & Spring Boot</h3><p data-i18n="stack_c1">APIs enterprise, arquitetura robusta e aplicações escaláveis de alta performance.</p></div>
+      <div class="stack-card"><h3>Node.js & Express</h3><p data-i18n="stack_c2">APIs REST rápidas, integrações e sistemas JavaScript modernos.</p></div>
+      <div class="stack-card"><h3>TypeScript</h3><p data-i18n="stack_c3">Tipagem estática de ponta a ponta, do backend ao frontend, prevenindo bugs antes da produção.</p></div>
+      <div class="stack-card"><h3>Prisma ORM</h3><p data-i18n="stack_c4">Modelagem type-safe de dados sobre MySQL e PostgreSQL, com migrações versionadas.</p></div>
+      <div class="stack-card"><h3>MySQL & PostgreSQL</h3><p data-i18n="stack_c5">Modelagem relacional e persistência de dados para aplicações reais.</p></div>
+      <div class="stack-card"><h3>React & Vite</h3><p data-i18n="stack_c6">Interfaces modernas, componentizadas e conectadas diretamente à API.</p></div>
+      <div class="stack-card"><h3>React Native & Expo</h3><p data-i18n="stack_c7">Apps mobile nativos para Android e iOS a partir de uma única base de código.</p></div>
+      <div class="stack-card"><h3>JWT & Segurança</h3><p data-i18n="stack_c8">Autenticação stateless, RBAC e proteção contra abuso para APIs e sistemas distribuídos.</p></div>
+      <div class="stack-card"><h3>Vitest</h3><p data-i18n="stack_c9">Testes automatizados cobrindo services e rotas críticas antes de cada deploy.</p></div>
+      <div class="stack-card"><h3>Git & GitHub Actions</h3><p data-i18n="stack_c10">Versionamento profissional e pipelines de CI que testam e constroem a cada push.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ════ CONTACT ════ -->
 <section id="contact" class="section contact-section">
   <div class="container" style="display:flex;justify-content:center;">
     <div class="contact-inner">
-      <span class="section-label" data-i18n="contact_label">Contato</span>
-      <h2 data-i18n="contact_h2">Vamos construir algo excepcional.</h2>
-      <p  data-i18n="contact_p">Disponível para projetos remotos, contratos estratégicos e parcerias de longo prazo com empresas e equipes globais.</p>
+      <span class="section-label" data-i18n="contact_label">CONTATO</span>
+      <h2 data-i18n="contact_h2">Vamos construir algo que não cai.</h2>
+      <p data-i18n="contact_p">Disponível para projetos remotos, contratos estratégicos e parcerias de longo prazo com empresas e equipes globais.</p>
       <div class="contact-actions">
-        <a class="btn btn-primary" href="mailto:roberson_sl@hotmail.com" data-i18n="contact_btn1">Enviar E-mail</a>
-        <a class="btn btn-outline"  href="https://github.com/RobersonCodes"                            target="_blank" rel="noopener">GitHub</a>
-        <a class="btn btn-outline"  href="https://www.linkedin.com/in/roberson-de-oliveira-tecnologia" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="btn btn-outline"  href="https://wa.me/5551991640903?text=Olá%2C%20vi%20seu%20portfólio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn btn-primary" href="mailto:roberson_sl@hotmail.com" data-i18n="contact_btn1">Enviar e-mail</a>
+        <a class="btn btn-outline" href="https://github.com/RobersonCodes" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn btn-outline" href="https://www.linkedin.com/in/roberson-de-oliveira-tecnologia" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn btn-outline" href="https://wa.me/5551991640903?text=Olá%2C%20vi%20seu%20portfólio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto" target="_blank" rel="noopener">WhatsApp</a>
       </div>
       <div class="contact-info">
         <p><span data-i18n="contact_info">Baseado no Brasil · Disponível globalmente</span> · <a href="mailto:roberson_sl@hotmail.com">roberson_sl@hotmail.com</a></p>
@@ -294,22 +281,20 @@
 
 </main>
 
-<!-- ─── FOOTER ─── -->
 <footer class="footer">
-  <div class="footer-wm" aria-hidden="true"><img src="Imagens/Banner_Fundo.png" alt="" /></div>
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <div class="footer-logo"><img src="Imagens/Banner_Fundo.png" alt="OS" /></div>
+        <div class="footer-logo"><span class="brand-mark"></span></div>
         <h3>Oliveira Systems</h3>
-        <p data-i18n="footer_desc">Engenharia backend, REST APIs e integração com IA para times que exigem qualidade e confiabilidade.</p>
+        <p data-i18n="footer_desc">Engenharia full-stack, monitoramento e interfaces modernas para times que exigem qualidade e confiabilidade.</p>
       </div>
       <div class="footer-col">
         <h4 data-i18n="footer_nav">Navegação</h4>
-        <a href="#about"    data-i18n="nav_about">Sobre</a>
+        <a href="#about" data-i18n="nav_about">Sobre</a>
         <a href="#services" data-i18n="nav_services">Serviços</a>
         <a href="#projects" data-i18n="nav_projects">Projetos</a>
-        <a href="#contact"  data-i18n="nav_contact">Contato</a>
+        <a href="#contact" data-i18n="footer_contact">Contato</a>
       </div>
       <div class="footer-col">
         <h4 data-i18n="footer_tech">Tecnologias</h4>
@@ -320,29 +305,22 @@
       </div>
       <div class="footer-col">
         <h4 data-i18n="footer_connect">Redes</h4>
-        <a href="https://github.com/RobersonCodes"                            target="_blank" rel="noopener">GitHub</a>
+        <a href="https://github.com/RobersonCodes" target="_blank" rel="noopener">GitHub</a>
         <a href="https://www.linkedin.com/in/roberson-de-oliveira-tecnologia" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://www.instagram.com/roberson_oliveiraa/"               target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.instagram.com/roberson_oliveiraa/" target="_blank" rel="noopener">Instagram</a>
         <a href="mailto:roberson_sl@hotmail.com">Email</a>
       </div>
     </div>
     <div class="footer-bottom">
       <p data-i18n="footer_copy">© 2026 Oliveira Systems — Todos os direitos reservados.</p>
-      <span class="status-dot" data-i18n="footer_status">Serviços online</span>
+      <span class="status-dot" data-i18n="footer_status">Sistemas operacionais</span>
     </div>
   </div>
 </footer>
 
-<!-- WhatsApp float -->
-<a class="whatsapp-float"
-   href="https://wa.me/5551991640903?text=Olá%2C%20vi%20seu%20portfólio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto"
-   target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
-
-<!-- Image Modal -->
-<div class="image-modal" id="imageModal">
-  <span class="close-modal">&times;</span>
-  <img id="modalImage" src="" alt="" />
-</div>
+<a class="whatsapp-float" href="https://wa.me/5551991640903?text=Olá%2C%20vi%20seu%20portfólio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" width="26" height="26"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.38 5.07L2 22l5.07-1.32A9.94 9.94 0 0012 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.5 0-2.9-.4-4.13-1.1l-.3-.17-3.05.8.82-2.97-.2-.31A7.96 7.96 0 014 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8z" fill="currentColor"/></svg>
+</a>
 
 <script src="main.js"></script>
 </body>

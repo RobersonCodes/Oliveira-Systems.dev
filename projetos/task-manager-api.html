@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task Manager API — Node.js, TypeScript e Arquitetura em Camadas | Oliveira Systems</title>
+  <meta name="description" content="Task Manager API — REST API em TypeScript com arquitetura em camadas, Prisma sobre PostgreSQL, validação Zod, testes automatizados, Docker e CI no GitHub Actions." />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+<div id="scrollBar"></div>
+
+<header class="header">
+  <nav class="nav container">
+    <a href="../index.html" class="brand">
+      <span class="brand-mark"></span>
+      <span>Oliveira Systems</span>
+    </a>
+    <div class="nav-right">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html#about" data-i18n="nav_about">Sobre</a></li>
+        <li><a href="../index.html#services" data-i18n="nav_services">Serviços</a></li>
+        <li><a href="../index.html#projects" data-i18n="nav_projects">Projetos</a></li>
+        <li><a href="../index.html#contact" class="nav-cta" data-i18n="nav_contact">Falar comigo</a></li>
+      </ul>
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="pt">PT</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+      <button class="menu-btn" id="menuBtn" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <section class="startup-hero startup-hero--taskmanager-api">
+    <div class="container startup-hero-grid">
+      <div class="startup-copy">
+        <span class="section-label">Node.js · TypeScript · Prisma · REST API</span>
+        <h1>Task Manager API</h1>
+        <p data-i18n="t_intro">REST API para gerenciamento de tarefas, reescrita em arquitetura de camadas — routes, controllers, services e repository — com Prisma sobre PostgreSQL, validação Zod, testes automatizados, Docker e CI.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://github.com/RobersonCodes/task-manager-api" target="_blank" rel="noopener" data-i18n="btn_github">Ver no GitHub</a>
+          <a class="btn btn-outline" href="../index.html#projects" data-i18n="btn_back">← Voltar aos projetos</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="startup-metrics-section">
+    <div class="container startup-metrics">
+      <div><strong>29 testes</strong><span data-i18n="t_m1">Unitários e de integração</span></div>
+      <div><strong data-i18n="t_m2t">Camadas</strong><span data-i18n="t_m2">Service nunca importa o Prisma</span></div>
+      <div><strong>Docker</strong><span data-i18n="t_m3">Multi-stage + docker-compose</span></div>
+      <div><strong data-i18n="t_m4t">CI</strong><span data-i18n="t_m4">Lint, types, testes e build no push</span></div>
+    </div>
+  </section>
+
+  <section class="section dark-section">
+    <div class="container case-grid">
+      <article class="case-card">
+        <span class="section-label" data-i18n="t_challenge_label">Desafio</span>
+        <h2 data-i18n="t_challenge_h">Uma API de tarefas simples pode esconder decisões de arquitetura que não escalam.</h2>
+        <p data-i18n="t_challenge_p">A primeira versão da API misturava validação, regra de negócio e acesso a dados na mesma camada — funcional, mas difícil de testar isoladamente e arriscado de evoluir. O desafio era reescrever a API inteira numa arquitetura que permitisse testar a regra de negócio sem banco de dados, e trocar de ORM ou banco no futuro sem tocar na lógica central.</p>
+      </article>
+      <article class="case-card">
+        <span class="section-label" data-i18n="t_solution_label">Solução</span>
+        <h2 data-i18n="t_solution_h">Camadas estritas — só o repository conhece o Prisma, o resto não sabe que ele existe.</h2>
+        <p data-i18n="t_solution_p">A API segue routes → controllers → services → repository, com uma regra simples: apenas o `task.repository.ts` importa `@prisma/client`. O `TaskService` concentra toda a regra de negócio e é testado isoladamente com o repository mockado, sem precisar de banco nos testes unitários. A validação de entrada usa Zod em um middleware genérico (`validate()`), o logging é estruturado com Pino, e erros HTTP passam por um `errorHandler` centralizado que formata a resposta de forma consistente. Helmet e rate limiting cobrem um hardening básico de produção.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <span class="section-label" data-i18n="t_tech_label">Tecnologias</span>
+      <h2 class="center-title" data-i18n="t_tech_h">Stack</h2>
+      <div class="cards">
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
+          <h3>Prisma + PostgreSQL</h3>
+          <p data-i18n="t_tech1_p">Único ponto de acesso ao banco isolado no repository, com migrations versionadas e um client singleton lazy.</p>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>Zod</h3>
+          <p data-i18n="t_tech2_p">Validação de entrada e variáveis de ambiente, com tipos inferidos diretamente do schema — falha rápido se algo estiver errado.</p>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 17l5-5-5-5M11 19h9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>Vitest + Supertest</h3>
+          <p data-i18n="t_tech3_p">29 testes — unitários mockando o repository inteiro, e de integração validando o fluxo completo contra um Postgres real.</p>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M3 8l9-5 9 5-9 5-9-5zM3 8v8l9 5 9-5V8" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
+          <h3>Docker Multi-Stage</h3>
+          <p data-i18n="t_tech4_p">Build otimizado em múltiplos estágios, com docker-compose subindo API e Postgres juntos para desenvolvimento local.</p>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
+          <h3>Helmet + Rate Limit</h3>
+          <p data-i18n="t_tech5_p">Hardening básico de produção — cabeçalhos de segurança HTTP e limitação de requisições por IP.</p>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
+          <h3>GitHub Actions</h3>
+          <p data-i18n="t_tech6_p">CI completo a cada push — lint, type-check, testes com Postgres em serviço, e build, antes de qualquer merge.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section dark-section">
+    <div class="container case-result" style="margin:0 auto;">
+      <span class="section-label" data-i18n="t_outcome_label">Resultado</span>
+      <h2 data-i18n="t_outcome_h">Uma API pequena, mas com a disciplina de arquitetura de um sistema grande.</h2>
+      <p data-i18n="t_outcome_p">O Task Manager API demonstra que arquitetura em camadas bem definida não é exclusividade de sistemas grandes — mesmo um domínio simples como tarefas se beneficia de uma separação clara entre regra de negócio e infraestrutura. A regra de negócio é testável sem banco, o erro HTTP é sempre consistente, e trocar Postgres por outro banco no futuro não exigiria tocar no `TaskService`. README documenta inclusive as limitações conhecidas — sem autenticação, sem soft-delete — como próximos passos explícitos, não como falhas escondidas.</p>
+      <div class="hero-actions" style="justify-content:center;margin-top:36px;">
+        <a class="btn btn-primary" href="https://github.com/RobersonCodes/task-manager-api" target="_blank" rel="noopener" data-i18n="btn_repo">Ver repositório</a>
+        <a class="btn btn-outline" href="../index.html#projects" data-i18n="btn_all">← Todos os projetos</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer-page">
+  <div class="container footer-bottom-page">
+    <p data-i18n="footer_copy">© 2026 Oliveira Systems — Todos os direitos reservados.</p>
+    <span class="status-dot">Task Manager API · TypeScript · Prisma</span>
+  </div>
+</footer>
+
+<div class="image-modal" id="imageModal"><span class="close-modal">&times;</span><img id="modalImage" src="" alt="" /></div>
+<script src="task-manager-api.translations.js"></script>
+<script src="../main.js"></script>
+</body>
+</html>

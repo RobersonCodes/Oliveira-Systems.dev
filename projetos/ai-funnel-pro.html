@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Funnel Pro — Landing Page 3D com Three.js | Oliveira Systems</title>
+  <meta name="description" content="AI Funnel Pro — landing page SaaS futurista com hero 3D em Three.js, glassmorphism e motion design cinematográfico, inspirada em Vercel, Linear e Stripe." />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+<div id="scrollBar"></div>
+
+<header class="header">
+  <nav class="nav container">
+    <a href="../index.html" class="brand">
+      <span class="brand-mark"></span>
+      <span>Oliveira Systems</span>
+    </a>
+    <div class="nav-right">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html#about" data-i18n="nav_about">Sobre</a></li>
+        <li><a href="../index.html#services" data-i18n="nav_services">Serviços</a></li>
+        <li><a href="../index.html#projects" data-i18n="nav_projects">Projetos</a></li>
+        <li><a href="../index.html#contact" class="nav-cta" data-i18n="nav_contact">Falar comigo</a></li>
+      </ul>
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="pt">PT</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+      <button class="menu-btn" id="menuBtn" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <section class="startup-hero startup-hero--funnel">
+    <div class="container startup-hero-grid">
+      <div class="startup-copy">
+        <span class="section-label">HTML5 · Three.js · Motion Design · Em andamento</span>
+        <h1>AI Funnel Pro</h1>
+        <p data-i18n="t_intro">Landing page futurista estilo SaaS premium — hero 3D interativo em Three.js, glassmorphism, partículas animadas e motion cinematográfico, inspirada em interfaces como Vercel, Linear e Stripe.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://github.com/RobersonCodes/Ai-Funnel-Pro" target="_blank" rel="noopener" data-i18n="btn_github">Ver no GitHub</a>
+          <a class="btn btn-outline" href="../index.html#projects" data-i18n="btn_back">← Voltar aos projetos</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="startup-metrics-section">
+    <div class="container startup-metrics">
+      <div><strong>Three.js</strong><span data-i18n="t_m1">Orb 3D com luz dinâmica</span></div>
+      <div><strong data-i18n="t_m2t">Glassmorphism</strong><span data-i18n="t_m2">UI premium em camadas</span></div>
+      <div><strong data-i18n="t_m3t">Motion</strong><span data-i18n="t_m3">Scroll reveal cinematográfico</span></div>
+      <div><strong data-i18n="t_m4t">Em andamento</strong><span data-i18n="t_m4">Evoluindo a cada iteração</span></div>
+    </div>
+  </section>
+
+  <section class="section dark-section">
+    <div class="container case-grid">
+      <article class="case-card">
+        <span class="section-label" data-i18n="t_challenge_label">Desafio</span>
+        <h2 data-i18n="t_challenge_h">Provar domínio de front-end avançado exige mais do que um template bonito.</h2>
+        <p data-i18n="t_challenge_p">A maior parte dos projetos do portfólio demonstra arquitetura de backend e sistemas completos. Faltava uma peça focada inteiramente em capacidade de front-end de alto nível — motion design, profundidade visual e interatividade no padrão de produtos SaaS internacionais como Vercel, Linear e Stripe, sem depender de nenhum framework pesado.</p>
+      </article>
+      <article class="case-card">
+        <span class="section-label" data-i18n="t_solution_label">Solução</span>
+        <h2 data-i18n="t_solution_h">Um hero 3D real em Three.js, construído com HTML, CSS e JavaScript puro.</h2>
+        <p data-i18n="t_solution_p">O hero renderiza uma cena Three.js com um orb icosaédrico, material com glow próprio e duas point lights coloridas (violeta e ciano) reagindo ao movimento do cursor. O restante da página usa um sistema de partículas em canvas, botões magnéticos, cursor glow customizado e scroll reveal — tudo orquestrado em JavaScript vanilla, sobre uma arquitetura CSS modular (variables, reset, components, style). É um projeto vivo, em evolução constante conforme novos efeitos são testados.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <span class="section-label" data-i18n="t_tech_label">Tecnologias</span>
+      <h2 class="center-title" data-i18n="t_tech_h">Stack</h2>
+      <div class="cards">
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 2l9 4.9v8.2L12 22l-9-4.9V6.9L12 2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
+          <h3>Three.js</h3>
+          <p data-i18n="t_tech1_p">Cena 3D real com IcosahedronGeometry, material MeshStandardMaterial com glow, e point lights dinâmicas em violeta e ciano.</p>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+          <h3>Sistema de Partículas</h3>
+          <p data-i18n="t_tech2_p">Partículas animadas em canvas reagindo ao scroll e ao cursor, reforçando a sensação de profundidade da interface.</p>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 12h8M12 8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+          <h3>CSS Modular</h3>
+          <p data-i18n="t_tech3_p">Arquitetura dividida em variables, reset, components e style — facilitando manutenção e extensão de efeitos visuais.</p>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
+          <h3>Botões Magnéticos</h3>
+          <p data-i18n="t_tech4_p">Interações que seguem o cursor com easing suave, um padrão comum em landing pages SaaS premium.</p>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" opacity=".4"/><path d="M8 8h8v8H8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
+          <h3>Glassmorphism</h3>
+          <p data-i18n="t_tech5_p">Camadas translúcidas com blur, replicando a estética premium de produtos como Stripe e Framer.</p>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M3 12h4l3 8 4-16 3 8h4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>Scroll Reveal</h3>
+          <p data-i18n="t_tech6_p">Animações de entrada cinematográficas disparadas por scroll, com timing calibrado para sensação premium.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section dark-section">
+    <div class="container case-result" style="margin:0 auto;">
+      <span class="section-label" data-i18n="t_outcome_label">Resultado</span>
+      <h2 data-i18n="t_outcome_h">Uma peça viva de motion design, evoluindo a cada novo efeito testado.</h2>
+      <p data-i18n="t_outcome_p">O AI Funnel Pro é um projeto em andamento — não um produto com backend por trás, mas uma demonstração direta de capacidade em front-end avançado: 3D real, partículas, glassmorphism e motion design no nível de interfaces internacionais premium, construído inteiramente sem frameworks pesados. Continua recebendo novos efeitos e refinamentos visuais.</p>
+      <div class="hero-actions" style="justify-content:center;margin-top:36px;">
+        <a class="btn btn-primary" href="https://github.com/RobersonCodes/Ai-Funnel-Pro" target="_blank" rel="noopener" data-i18n="btn_repo">Ver repositório</a>
+        <a class="btn btn-outline" href="../index.html#projects" data-i18n="btn_all">← Todos os projetos</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer-page">
+  <div class="container footer-bottom-page">
+    <p data-i18n="footer_copy">© 2026 Oliveira Systems — Todos os direitos reservados.</p>
+    <span class="status-dot">AI Funnel Pro · Three.js · Em andamento</span>
+  </div>
+</footer>
+
+<div class="image-modal" id="imageModal"><span class="close-modal">&times;</span><img id="modalImage" src="" alt="" /></div>
+<script src="ai-funnel-pro.translations.js"></script>
+<script src="../main.js"></script>
+</body>
+</html>

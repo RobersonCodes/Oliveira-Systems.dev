@@ -1,79 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Guardian Recovery | Oliveira Systems</title>
-  <meta name="description" content="Guardian Recovery — Enterprise monitoring platform for service uptime, incident detection, and disaster recovery." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <meta name="description" content="Guardian Recovery — plataforma enterprise de monitoramento, detecção de incidentes e recuperação de desastre." />
   <link rel="stylesheet" href="../style.css" />
 </head>
 <body>
 <div id="scrollBar"></div>
-<!-- Brand watermarks -->
-<div class="brand-watermark" aria-hidden="true"><img src="../Imagens/Banner_Fundo.png" alt="" /></div>
-<div class="wm-corner wm-tl" aria-hidden="true"><img src="../Imagens/Banner_Fundo.png" alt="" /></div>
-
-<div class="cursor-glow"></div>
-<div class="animated-bg" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
 
 <header class="header">
   <nav class="nav container">
-    <a href="../index.html" class="brand"><span class="brand-icon"><img src="../Imagens/Banner_Fundo.png" alt="OS Logo" /></span><span>Oliveira Systems</span></a>
+    <a href="../index.html" class="brand">
+      <span class="brand-mark"></span>
+      <span>Oliveira Systems</span>
+    </a>
     <div class="nav-right">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html#about" data-i18n="nav_about">Sobre</a></li>
+        <li><a href="../index.html#services" data-i18n="nav_services">Serviços</a></li>
+        <li><a href="../index.html#projects" data-i18n="nav_projects">Projetos</a></li>
+        <li><a href="../index.html#contact" class="nav-cta" data-i18n="nav_contact">Falar comigo</a></li>
+      </ul>
       <div class="lang-switcher">
         <button class="lang-btn active" data-lang="pt">PT</button>
         <button class="lang-btn" data-lang="en">EN</button>
       </div>
-      <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+      <button class="menu-btn" id="menuBtn" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-    <div class="nav-right"><ul class="nav-links" id="navLinks">
-      <li><a href="../index.html#about">About</a></li>
-      <li><a href="../index.html#services">Services</a></li>
-      <li><a href="../index.html#projects">Projects</a></li>
-      <li><a href="../index.html#contact" class="nav-cta">Get in Touch</a></li>
-    </ul>
   </nav>
 </header>
 
 <main>
 
-  <section class="startup-hero guardian-hero">
+  <section class="startup-hero startup-hero--guardian">
     <div class="container startup-hero-grid">
       <div class="startup-copy">
-        <span class="section-label">Monitoring · Incident Response · Disaster Recovery</span>
+        <span class="section-label" data-i18n="g_eyebrow">Monitoramento · Resposta a Incidentes · Disaster Recovery</span>
         <h1>Guardian Recovery</h1>
-        <p>Enterprise platform for real-time service monitoring, automated incident creation, and operational recovery — built for teams that can't afford downtime.</p>
+        <p data-i18n="g_intro">Plataforma enterprise para monitoramento de serviços em tempo real, criação automática de incidentes e recuperação operacional — construída para times que não podem ter downtime.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="https://github.com/RobersonCodes/Guardian-Recovery-Platform-Plataforma-Enterprise-de-Monitoramento-e-Disaster-Recovery" target="_blank" rel="noopener">View on GitHub</a>
-          <a class="btn btn-outline" href="../index.html#projects">← Back to Projects</a>
+          <a class="btn btn-primary" href="https://github.com/RobersonCodes/Guardian-Recovery-Platform-Plataforma-Enterprise-de-Monitoramento-e-Disaster-Recovery" target="_blank" rel="noopener" data-i18n="btn_github">Ver no GitHub</a>
+          <a class="btn btn-outline" href="../index.html#projects" data-i18n="btn_back">← Voltar aos projetos</a>
         </div>
-      </div>
-      <div class="startup-banner">
-        <img class="zoomable-image" src="../Imagens/Guardian.png" alt="Guardian Recovery Dashboard" />
       </div>
     </div>
   </section>
 
   <section class="startup-metrics-section">
     <div class="container startup-metrics">
-      <div><strong>99.9%</strong><span>System Uptime</span></div>
-      <div><strong>24/7</strong><span>Continuous Monitoring</span></div>
-      <div><strong>12ms</strong><span>Avg Response Time</span></div>
-      <div><strong>Real‑time</strong><span>Incident Detection</span></div>
+      <div><strong>99.9%</strong><span data-i18n="g_m1">Uptime do sistema</span></div>
+      <div><strong>24/7</strong><span data-i18n="g_m2">Monitoramento contínuo</span></div>
+      <div><strong>HMAC</strong><span data-i18n="g_m3">JWT com refresh rotation</span></div>
+      <div><strong data-i18n="g_m4t">CI</strong><span data-i18n="g_m4">GitHub Actions</span></div>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
-      <span class="section-label">Dashboard</span>
-      <h2 class="center-title">Real-time monitoring at a glance</h2>
+      <span class="section-label" data-i18n="g_dash_label">Dashboard</span>
+      <h2 class="center-title" data-i18n="g_dash_h">Monitoramento em tempo real, em um só lugar</h2>
       <div class="gallery-grid">
-        <div class="gallery-item"><img class="zoomable-image" src="../Imagens/Dashboard.png"  alt="Guardian Dashboard" /></div>
-        <div class="gallery-item"><img class="zoomable-image" src="../Imagens/incidents.png"  alt="Incidents Management" /></div>
-        <div class="gallery-item"><img class="zoomable-image" src="../Imagens/servicos.png"   alt="Services Monitoring" /></div>
+        <div class="gallery-item"><img class="zoomable-image" src="../Imagens/optimized/Dashboard.webp" alt="Guardian Dashboard" /></div>
+        <div class="gallery-item"><img class="zoomable-image" src="../Imagens/optimized/incidents.webp" alt="Gestão de Incidentes" /></div>
+        <div class="gallery-item"><img class="zoomable-image" src="../Imagens/optimized/servicos.webp" alt="Monitoramento de Serviços" /></div>
       </div>
     </div>
   </section>
@@ -81,42 +74,52 @@
   <section class="section dark-section">
     <div class="container case-grid">
       <article class="case-card">
-        <span class="section-label">Problem</span>
-        <h2>Downtime costs money. Slow detection makes it worse.</h2>
-        <p>Enterprises need to detect failures in seconds, track service availability across distributed systems, and respond to incidents before they cascade into user-facing outages.</p>
+        <span class="section-label" data-i18n="g_problem_label">Problema</span>
+        <h2 data-i18n="g_problem_h">Downtime custa dinheiro. Detecção lenta piora tudo.</h2>
+        <p data-i18n="g_problem_p">Empresas precisam detectar falhas em segundos, acompanhar a disponibilidade de serviços distribuídos e responder a incidentes antes que se tornem indisponibilidade visível ao usuário.</p>
       </article>
       <article class="case-card">
-        <span class="section-label">Solution</span>
-        <h2>Continuous monitoring with automated incident response.</h2>
-        <p>Guardian Recovery polls services in real time, runs health checks, measures response latency, and automatically opens incidents when services degrade — reducing MTTR dramatically.</p>
+        <span class="section-label" data-i18n="g_solution_label">Solução</span>
+        <h2 data-i18n="g_solution_h">Monitoramento contínuo com resposta automática a incidentes</h2>
+        <p data-i18n="g_solution_p">O Guardian Recovery consulta serviços em tempo real, executa health checks, mede latência de resposta e abre incidentes automaticamente quando um serviço degrada — reduzindo drasticamente o tempo de resposta.</p>
       </article>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
-      <span class="section-label">Technologies</span>
-      <h2 class="center-title">Stack powering the platform</h2>
+      <span class="section-label" data-i18n="g_tech_label">Tecnologias</span>
+      <h2 class="center-title" data-i18n="g_tech_h">Stack por trás da plataforma</h2>
       <div class="cards">
         <article class="card">
-          <div class="icon">☕</div>
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M9 3v4M15 3v4M5 9h14l-1 11H6L5 9z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           <h3>Java 17</h3>
-          <p>Enterprise-grade backend — performance, stability, and object-oriented precision.</p>
+          <p data-i18n="g_tech1_p">Backend enterprise — performance, estabilidade e precisão orientada a objetos.</p>
         </article>
         <article class="card">
-          <div class="icon">SB</div>
+          <div class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="14" y="3" width="7" height="7" rx="1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="14" width="7" height="7" rx="1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="14" y="14" width="7" height="7" rx="1" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
           <h3>Spring Boot</h3>
-          <p>REST APIs for monitoring, incident lifecycle management, and service orchestration.</p>
+          <p data-i18n="g_tech2_p">APIs REST para monitoramento, ciclo de vida de incidentes e orquestração de serviços.</p>
         </article>
         <article class="card">
-          <div class="icon">JWT</div>
-          <h3>JWT Security</h3>
-          <p>Token-based authentication protecting administrative access and API endpoints.</p>
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
+          <h3>JWT HMAC-SHA256</h3>
+          <p data-i18n="g_tech3_p">Tokens assinados com HMAC-SHA256, rotação de refresh token e controle de acesso por papéis (RBAC).</p>
         </article>
         <article class="card">
-          <div class="icon">DB</div>
-          <h3>MySQL</h3>
-          <p>Persistent storage for incidents, health logs, and monitoring metrics.</p>
+          <div class="icon"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 5v14c0 1.66 3.58 3 8 3s8-1.34 8-3V5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 12c0 1.66 3.58 3 8 3s8-1.34 8-3" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
+          <h3>MySQL + Flyway</h3>
+          <p data-i18n="g_tech4_p">Armazenamento persistente para incidentes e métricas, com migrações versionadas via Flyway.</p>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3 data-i18n="g_tech5_h">Proteção contra SSRF</h3>
+          <p data-i18n="g_tech5_p">Validação de URLs de monitoramento para impedir que o serviço seja usado para acessar redes internas indevidamente.</p>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3 data-i18n="g_tech6_h">Rate limiting + CI</h3>
+          <p data-i18n="g_tech6_p">Limitação de requisições contra abuso, com pipeline de testes e build automatizado via GitHub Actions.</p>
         </article>
       </div>
     </div>
@@ -124,23 +127,38 @@
 
   <section class="section dark-section">
     <div class="container">
-      <span class="section-label">Key Features</span>
-      <h2 class="center-title">Platform capabilities</h2>
+      <span class="section-label" data-i18n="g_features_label">Funcionalidades</span>
+      <h2 class="center-title" data-i18n="g_features_h">Capacidades da plataforma</h2>
       <div class="project-grid">
         <article class="project-card-sm">
-          <span class="project-tag">Monitoring</span>
-          <h3>Health Checks</h3>
-          <p>Continuous availability checks across all registered services with configurable intervals.</p>
+          <span class="project-tag" data-i18n="g_f1_tag">Monitoramento</span>
+          <h3 data-i18n="g_f1_h">Health checks</h3>
+          <p data-i18n="g_f1_p">Verificações contínuas de disponibilidade em todos os serviços registrados, com intervalos configuráveis.</p>
         </article>
         <article class="project-card-sm">
-          <span class="project-tag">Incidents</span>
-          <h3>Auto Incidents</h3>
-          <p>Incidents are created automatically when services go offline — no manual intervention needed.</p>
+          <span class="project-tag" data-i18n="g_f2_tag">Incidentes</span>
+          <h3 data-i18n="g_f2_h">Incidentes automáticos</h3>
+          <p data-i18n="g_f2_p">Incidentes são criados automaticamente quando serviços ficam fora do ar — sem intervenção manual.</p>
         </article>
         <article class="project-card-sm">
-          <span class="project-tag">Metrics</span>
-          <h3>Live Metrics</h3>
-          <p>Response time, uptime percentage, and operational status visible at all times.</p>
+          <span class="project-tag" data-i18n="g_f3_tag">Métricas</span>
+          <h3 data-i18n="g_f3_h">Métricas em tempo real</h3>
+          <p data-i18n="g_f3_p">Tempo de resposta, percentual de uptime e status operacional visíveis a qualquer momento.</p>
+        </article>
+        <article class="project-card-sm">
+          <span class="project-tag" data-i18n="g_f4_tag">Acesso</span>
+          <h3 data-i18n="g_f4_h">RBAC por papéis</h3>
+          <p data-i18n="g_f4_p">Permissões de administrador, operador e visualizador, controladas a nível de rota e de recurso.</p>
+        </article>
+        <article class="project-card-sm">
+          <span class="project-tag" data-i18n="g_f5_tag">Segurança</span>
+          <h3 data-i18n="g_f5_h">Defesa contra SSRF e abuso</h3>
+          <p data-i18n="g_f5_p">Validação de URLs monitoradas e rate limiting nas rotas públicas, prevenindo uso indevido da própria plataforma.</p>
+        </article>
+        <article class="project-card-sm">
+          <span class="project-tag" data-i18n="g_f6_tag">Entrega</span>
+          <h3 data-i18n="g_f6_h">CI com GitHub Actions</h3>
+          <p data-i18n="g_f6_p">Build, testes e migrações Flyway executados automaticamente a cada push, antes de qualquer deploy.</p>
         </article>
       </div>
     </div>
@@ -148,28 +166,28 @@
 
   <section class="section">
     <div class="container case-result" style="margin:0 auto;">
-      <span class="section-label">Outcome</span>
-      <h2>A platform modeled after modern enterprise observability tools.</h2>
-      <p>Guardian Recovery demonstrates deep competency in Java backend engineering, REST API design, monitoring systems, and incident response workflows — concepts used by SaaS platforms like PagerDuty and Datadog.</p>
-      <p>Designed with scalability and observability in mind, the codebase follows clean architecture principles and is ready to support multi-tenant environments.</p>
+      <span class="section-label" data-i18n="g_outcome_label">Resultado</span>
+      <h2 data-i18n="g_outcome_h">Uma plataforma inspirada em ferramentas modernas de observabilidade enterprise.</h2>
+      <p data-i18n="g_outcome_p1">O Guardian Recovery demonstra competência profunda em engenharia backend Java, design de APIs REST, sistemas de monitoramento e fluxos de resposta a incidentes — conceitos usados por plataformas SaaS como PagerDuty e Datadog.</p>
+      <p data-i18n="g_outcome_p2">Projetado com escalabilidade e observabilidade em mente, o código segue princípios de arquitetura limpa, com autenticação JWT assinada por HMAC-SHA256, RBAC por papéis, proteção contra SSRF, rate limiting e migrações versionadas via Flyway — testado e construído automaticamente a cada push via GitHub Actions.</p>
       <div class="hero-actions" style="justify-content:center;margin-top:36px;">
-        <a class="btn btn-primary" href="https://github.com/RobersonCodes/Guardian-Recovery-Platform-Plataforma-Enterprise-de-Monitoramento-e-Disaster-Recovery" target="_blank" rel="noopener">View Repository</a>
-        <a class="btn btn-outline" href="../index.html#projects">← All Projects</a>
+        <a class="btn btn-primary" href="https://github.com/RobersonCodes/Guardian-Recovery-Platform-Plataforma-Enterprise-de-Monitoramento-e-Disaster-Recovery" target="_blank" rel="noopener" data-i18n="btn_repo">Ver repositório</a>
+        <a class="btn btn-outline" href="../index.html#projects" data-i18n="btn_all">← Todos os projetos</a>
       </div>
     </div>
   </section>
 
 </main>
 
-<footer class="footer">
-  <div class="footer-wm" aria-hidden="true"><img src="../Imagens/Banner_Fundo.png" alt="" /></div>
-  <div class="container footer-bottom">
-    <p>© 2026 Oliveira Systems — All rights reserved.</p>
+<footer class="footer-page">
+  <div class="container footer-bottom-page">
+    <p data-i18n="footer_copy">© 2026 Oliveira Systems — Todos os direitos reservados.</p>
     <span class="status-dot">Guardian Recovery · Enterprise Monitoring</span>
   </div>
 </footer>
 
 <div class="image-modal" id="imageModal"><span class="close-modal">&times;</span><img id="modalImage" src="" alt="" /></div>
+<script src="guardian.translations.js"></script>
 <script src="../main.js"></script>
 </body>
 </html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CRM Comercial de Campo — React + Firebase | Oliveira Systems</title>
+  <meta name="description" content="CRM comercial para representantes de campo de marcas multinacionais — sell out, funil de vendas, agenda técnica e exportação fiel a Excel, com sincronização Firebase e modo 100% offline." />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+<div id="scrollBar"></div>
+
+<header class="header">
+  <nav class="nav container">
+    <a href="../index.html" class="brand">
+      <span class="brand-mark"></span>
+      <span>Oliveira Systems</span>
+    </a>
+    <div class="nav-right">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html#about" data-i18n="nav_about">Sobre</a></li>
+        <li><a href="../index.html#services" data-i18n="nav_services">Serviços</a></li>
+        <li><a href="../index.html#projects" data-i18n="nav_projects">Projetos</a></li>
+        <li><a href="../index.html#contact" class="nav-cta" data-i18n="nav_contact">Falar comigo</a></li>
+      </ul>
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="pt">PT</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+      <button class="menu-btn" id="menuBtn" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <section class="startup-hero startup-hero--milwaukee">
+    <div class="container startup-hero-grid">
+      <div class="startup-copy">
+        <span class="section-label">React · Firebase · Offline-First · CRM</span>
+        <h1>CRM Comercial de Campo</h1>
+        <p data-i18n="t_intro">Sistema de gestão comercial para representantes de campo de marcas multinacionais — sell out, funil de vendas, agenda técnica e exportação fiel a Excel, com sincronização em nuvem e funcionamento 100% offline.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://github.com/RobersonCodes" target="_blank" rel="noopener" data-i18n="btn_github">Ver no GitHub</a>
+          <a class="btn btn-outline" href="../index.html#projects" data-i18n="btn_back">← Voltar aos projetos</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="startup-metrics-section">
+    <div class="container startup-metrics">
+      <div><strong data-i18n="t_m1t">9 módulos</strong><span data-i18n="t_m1">Dashboard a exportação Excel</span></div>
+      <div><strong data-i18n="t_m3t">Offline-first</strong><span data-i18n="t_m3">IndexedDB com sync automático</span></div>
+      <div><strong>454+</strong><span data-i18n="t_m2">Cadastros reais migrados</span></div>
+      <div><strong data-i18n="t_m4t">Produção</strong><span data-i18n="t_m4">Em uso real em campo</span></div>
+    </div>
+  </section>
+
+  <section class="section dark-section">
+    <div class="container case-grid">
+      <article class="case-card">
+        <span class="section-label" data-i18n="t_challenge_label">Desafio</span>
+        <h2 data-i18n="t_challenge_h">Um representante de campo cobrindo vários estados não pode depender de uma planilha por revenda.</h2>
+        <p data-i18n="t_challenge_p">O trabalho do representante envolvia controlar sell out por revenda, visitas técnicas, funil de vendas e catálogo de produtos manualmente em planilhas Excel separadas, sem visão consolidada e sem acesso em campo sem internet. O desafio era digitalizar esse fluxo inteiro sem perder a estrutura de dados que a equipe já conhecia, e sem exigir conexão constante.</p>
+      </article>
+      <article class="case-card">
+        <span class="section-label" data-i18n="t_solution_label">Solução</span>
+        <h2 data-i18n="t_solution_h">Um CRM completo que funciona offline e sincroniza sozinho quando a conexão volta.</h2>
+        <p data-i18n="t_solution_p">O sistema replica fielmente a estrutura da planilha original (sell out por trimestre, relatório de visitas com os mesmos campos, catálogo de produtos com preços reais) em uma interface React moderna. Os dados ficam persistidos localmente via IndexedDB e sincronizam com Firestore em segundo plano — o representante continua trabalhando normalmente sem sinal, e tudo se atualiza automaticamente ao reconectar. A exportação gera arquivos Excel com a mesma estrutura que a equipe já usava, sem mudar o fluxo de quem recebe os relatórios.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <span class="section-label" data-i18n="t_tech_label">Tecnologias</span>
+      <h2 class="center-title" data-i18n="t_tech_h">Stack</h2>
+      <div class="cards">
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 17l5-5-5-5M11 19h9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>React + React Router</h3>
+          <p data-i18n="t_tech1_p">SPA com 9 módulos completos — dashboard, funil, agenda, contatos, visitas e exportação, navegando sem reload.</p>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
+          <h3>Firebase Firestore</h3>
+          <p data-i18n="t_tech2_p">Sincronização em nuvem dos dados entre dispositivos, com Authentication para controle de acesso por usuário.</p>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
+          <h3>IndexedDB Persistence</h3>
+          <p data-i18n="t_tech3_p">Cache offline habilitado no Firestore — o sistema funciona 100% sem internet e sincroniza sozinho ao reconectar.</p>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M3 3v18h18M7 14l4-4 4 3 5-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>Kanban + Funil Ponderado</h3>
+          <p data-i18n="t_tech4_p">Pipeline de vendas em Kanban e lista, com funil ponderado por probabilidade de fechamento.</p>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 5v14c0 1.66 3.58 3 8 3s8-1.34 8-3V5" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
+          <h3>SheetJS (xlsx)</h3>
+          <p data-i18n="t_tech5_p">Exportação para Excel com estrutura idêntica à planilha original, mantendo compatibilidade com o fluxo já existente da equipe.</p>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M3 8l9-5 9 5-9 5-9-5zM3 8v8l9 5 9-5V8" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
+          <h3>Tailwind CSS</h3>
+          <p data-i18n="t_tech6_p">Interface responsiva pensada para uso em campo, em celular ou tablet, com a mesma qualidade do desktop.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section dark-section">
+    <div class="container case-result" style="margin:0 auto;">
+      <span class="section-label" data-i18n="t_outcome_label">Resultado</span>
+      <h2 data-i18n="t_outcome_h">Uma planilha de controle manual transformada em CRM real, sem perder uma linha de dados.</h2>
+      <p data-i18n="t_outcome_p">O CRM substituiu o controle manual em Excel por um sistema real de gestão comercial, migrando os dados históricos sem perdas e mantendo a estrutura que a equipe já conhecia. Funciona em campo sem depender de internet, sincroniza automaticamente e exporta relatórios no formato que o time já usava — reduzindo fricção de adoção e digitalizando um processo que antes vivia inteiramente em planilhas soltas.</p>
+      <div class="hero-actions" style="justify-content:center;margin-top:36px;">
+        <a class="btn btn-primary" href="https://github.com/RobersonCodes" target="_blank" rel="noopener" data-i18n="btn_repo">Ver repositório</a>
+        <a class="btn btn-outline" href="../index.html#projects" data-i18n="btn_all">← Todos os projetos</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer-page">
+  <div class="container footer-bottom-page">
+    <p data-i18n="footer_copy">© 2026 Oliveira Systems — Todos os direitos reservados.</p>
+    <span class="status-dot">CRM Comercial de Campo · React · Firebase</span>
+  </div>
+</footer>
+
+<div class="image-modal" id="imageModal"><span class="close-modal">&times;</span><img id="modalImage" src="" alt="" /></div>
+<script src="milwaukee-crm.translations.js"></script>
+<script src="../main.js"></script>
+</body>
+</html>

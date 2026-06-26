@@ -1,110 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Municipal Health System | Oliveira Systems</title>
-  <meta name="description" content="Municipal Health System — Enterprise public-health management API built with Java, Spring Boot, JWT, and AI-assisted triage." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <title>Sistema de Saúde Municipal | Oliveira Systems</title>
+  <meta name="description" content="Sistema de Saúde Municipal — API enterprise de gestão de saúde pública com Java, Spring Boot, JWT e triagem assistida por IA." />
   <link rel="stylesheet" href="../style.css" />
 </head>
 <body>
 <div id="scrollBar"></div>
-<!-- Brand watermarks -->
-<div class="brand-watermark" aria-hidden="true"><img src="../Imagens/Banner_Fundo.png" alt="" /></div>
-<div class="wm-corner wm-tl" aria-hidden="true"><img src="../Imagens/Banner_Fundo.png" alt="" /></div>
-
-<div class="cursor-glow"></div>
-<div class="animated-bg" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
 
 <header class="header">
   <nav class="nav container">
-    <a href="../index.html" class="brand"><span class="brand-icon"><img src="../Imagens/Banner_Fundo.png" alt="OS Logo" /></span><span>Oliveira Systems</span></a>
+    <a href="../index.html" class="brand">
+      <span class="brand-mark"></span>
+      <span>Oliveira Systems</span>
+    </a>
     <div class="nav-right">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html#about" data-i18n="nav_about">Sobre</a></li>
+        <li><a href="../index.html#services" data-i18n="nav_services">Serviços</a></li>
+        <li><a href="../index.html#projects" data-i18n="nav_projects">Projetos</a></li>
+        <li><a href="../index.html#contact" class="nav-cta" data-i18n="nav_contact">Falar comigo</a></li>
+      </ul>
       <div class="lang-switcher">
         <button class="lang-btn active" data-lang="pt">PT</button>
         <button class="lang-btn" data-lang="en">EN</button>
       </div>
-      <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+      <button class="menu-btn" id="menuBtn" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-    <div class="nav-right"><ul class="nav-links" id="navLinks">
-      <li><a href="../index.html#about">About</a></li>
-      <li><a href="../index.html#services">Services</a></li>
-      <li><a href="../index.html#projects">Projects</a></li>
-      <li><a href="../index.html#contact" class="nav-cta">Get in Touch</a></li>
-    </ul>
   </nav>
 </header>
 
 <main>
 
-  <section class="case-hero section">
+  <section class="case-hero case-hero--saude">
     <div class="container">
-      <span class="section-label">Featured Project</span>
-      <h1>Municipal Health System</h1>
-      <p class="case-intro">
-        A comprehensive public-health management platform — patient records, appointments, health-unit coordination, SUS integration, and AI-powered triage built to government standards.
-      </p>
+      <span class="section-label" data-i18n="s_label">Projeto em Destaque</span>
+      <h1>Sistema de Saúde Municipal</h1>
+      <p class="case-intro" data-i18n="s_intro">Uma plataforma completa de gestão de saúde pública — prontuários, consultas, coordenação de unidades de saúde, integração com SUS e triagem assistida por IA, construída para padrões governamentais.</p>
       <div class="hero-actions">
-        <a class="btn btn-primary"  href="https://github.com/RobersonCodes/Sistema-de-saude" target="_blank" rel="noopener">View on GitHub</a>
-        <a class="btn btn-outline"  href="../index.html#projects">← Back to Projects</a>
-      </div>
-      <div class="case-banner">
-        <img class="zoomable-image" src="../Imagens/Imagenssaude-dashboard.png" alt="Municipal Health System Dashboard" />
+        <a class="btn btn-primary" href="https://github.com/RobersonCodes/Sistema-de-saude" target="_blank" rel="noopener" data-i18n="btn_github">Ver no GitHub</a>
+        <a class="btn btn-outline" href="../index.html#projects" data-i18n="btn_back">← Voltar aos projetos</a>
       </div>
     </div>
   </section>
 
   <section class="startup-metrics-section">
     <div class="container startup-metrics">
-      <div><strong>Java 17</strong><span>Enterprise Backend</span></div>
-      <div><strong>JWT</strong><span>Secure Auth</span></div>
-      <div><strong>e-SUS</strong><span>Gov Integration</span></div>
-      <div><strong>AI</strong><span>Smart Triage</span></div>
+      <div><strong>Java 17</strong><span data-i18n="s_m1">Backend enterprise</span></div>
+      <div><strong>JWT</strong><span data-i18n="s_m2">Autenticação segura</span></div>
+      <div><strong>e-SUS</strong><span data-i18n="s_m3">Integração governamental</span></div>
+      <div><strong>IA</strong><span data-i18n="s_m4">Triagem inteligente</span></div>
     </div>
   </section>
 
   <section class="section dark-section">
     <div class="container case-grid">
       <article class="case-card">
-        <span class="section-label">Problem</span>
-        <h2>Public health management demands precision, security, and scale.</h2>
-        <p>Health units manage patients, professionals, appointments, and sensitive records. Without a centralized, secure platform, care delivery becomes slow, error-prone, and impossible to audit.</p>
+        <span class="section-label" data-i18n="s_problem_label">Problema</span>
+        <h2 data-i18n="s_problem_h">Gestão de saúde pública exige precisão, segurança e escala.</h2>
+        <p data-i18n="s_problem_p">Unidades de saúde gerenciam pacientes, profissionais, consultas e registros sensíveis. Sem uma plataforma centralizada e segura, o atendimento se torna lento, sujeito a erros e impossível de auditar.</p>
       </article>
       <article class="case-card">
-        <span class="section-label">Solution</span>
-        <h2>A robust API centralizing every public-health workflow.</h2>
-        <p>Built with layered architecture, JWT authentication, relational persistence, and business-rule enforcement — with integration hooks for e-SUS APS, RNDS, and AI-driven triage modules.</p>
+        <span class="section-label" data-i18n="s_solution_label">Solução</span>
+        <h2 data-i18n="s_solution_h">Uma API robusta centralizando cada fluxo de saúde pública.</h2>
+        <p data-i18n="s_solution_p">Construída com arquitetura em camadas, autenticação JWT, persistência relacional e regras de negócio bem definidas — com hooks de integração para e-SUS APS, RNDS e módulos de triagem com IA.</p>
       </article>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
-      <span class="section-label">Technologies</span>
-      <h2 class="center-title">Stack powering the platform</h2>
+      <span class="section-label" data-i18n="s_tech_label">Tecnologias</span>
+      <h2 class="center-title" data-i18n="s_tech_h">Stack por trás da plataforma</h2>
       <div class="cards">
         <article class="card">
-          <div class="icon">☕</div>
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M9 3v4M15 3v4M5 9h14l-1 11H6L5 9z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           <h3>Java 17</h3>
-          <p>Solid, type-safe, enterprise-oriented foundation for mission-critical applications.</p>
+          <p data-i18n="s_tech1_p">Fundação sólida, type-safe e orientada a aplicações de missão crítica.</p>
         </article>
         <article class="card">
-          <div class="icon">SB</div>
+          <div class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="14" y="3" width="7" height="7" rx="1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="14" width="7" height="7" rx="1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="14" y="14" width="7" height="7" rx="1" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
           <h3>Spring Boot</h3>
-          <p>Controllers, services, repositories, and DTOs following Spring's proven architecture.</p>
+          <p data-i18n="s_tech2_p">Controllers, services, repositories e DTOs seguindo a arquitetura comprovada do Spring.</p>
         </article>
         <article class="card">
-          <div class="icon">JWT</div>
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
           <h3>JWT Security</h3>
-          <p>Role-based access control protecting patient data and administrative operations.</p>
+          <p data-i18n="s_tech3_p">Controle de acesso baseado em papéis, protegendo dados de pacientes e operações administrativas.</p>
         </article>
         <article class="card">
-          <div class="icon">DB</div>
+          <div class="icon"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 5v14c0 1.66 3.58 3 8 3s8-1.34 8-3V5" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
           <h3>MySQL</h3>
-          <p>Relational data modeling for patients, appointments, professionals, and health units.</p>
+          <p data-i18n="s_tech4_p">Modelagem relacional para pacientes, consultas, profissionais e unidades de saúde.</p>
         </article>
       </div>
     </div>
@@ -112,43 +103,38 @@
 
   <section class="section">
     <div class="container">
-      <span class="section-label">Gallery</span>
-      <h2 class="center-title">System screens</h2>
-      <div class="gallery-grid">
-        <div class="gallery-item"><img class="zoomable-image" src="../Imagens/Imagenssaude-dashboard.png" alt="Health Dashboard" /></div>
-        <div class="gallery-item"><img class="zoomable-image" src="../Imagens/M1.png" alt="Patient Management" /></div>
-        <div class="gallery-item"><img class="zoomable-image" src="../Imagens/M2.png" alt="Appointments" /></div>
-        <div class="gallery-item"><img class="zoomable-image" src="../Imagens/M3.png" alt="Health Units" /></div>
-        <div class="gallery-item"><img class="zoomable-image" src="../Imagens/M4.png" alt="Professional Records" /></div>
-        <div class="gallery-item"><img class="zoomable-image" src="../Imagens/M5.png" alt="AI Triage" /></div>
+      <span class="section-label" data-i18n="s_gallery_label">Galeria</span>
+      <h2 class="center-title" data-i18n="s_gallery_h">O painel em detalhe</h2>
+      <div class="case-banner">
+        <img class="zoomable-image" src="../Imagens/optimized/Imagenssaude-dashboard.webp" alt="Dashboard de Saúde Municipal" />
       </div>
     </div>
   </section>
 
   <section class="section dark-section">
     <div class="container case-result" style="margin:0 auto;">
-      <span class="section-label">Outcome</span>
-      <h2>A production-grade health platform ready for real municipalities.</h2>
-      <p>The Municipal Health System demonstrates mastery of enterprise Java, complex business logic, government-standard integrations, and AI application in regulated environments.</p>
-      <p>The architecture is designed for audit compliance, data security, and the reliability requirements of public-sector healthcare.</p>
+      <span class="section-label" data-i18n="s_outcome_label">Resultado</span>
+      <h2 data-i18n="s_outcome_h">Uma plataforma de saúde pronta para produção em municípios reais.</h2>
+      <p data-i18n="s_outcome_p1">O Sistema de Saúde Municipal demonstra domínio de Java enterprise, lógica de negócio complexa, integrações com padrões governamentais e aplicação de IA em ambientes regulados.</p>
+      <p data-i18n="s_outcome_p2">A arquitetura é projetada para conformidade com auditoria, segurança de dados e os requisitos de confiabilidade da saúde pública.</p>
       <div class="hero-actions" style="justify-content:center;margin-top:36px;">
-        <a class="btn btn-primary" href="https://github.com/RobersonCodes/Sistema-de-saude" target="_blank" rel="noopener">View Repository</a>
-        <a class="btn btn-outline"  href="../index.html#projects">← All Projects</a>
+        <a class="btn btn-primary" href="https://github.com/RobersonCodes/Sistema-de-saude" target="_blank" rel="noopener" data-i18n="btn_repo">Ver repositório</a>
+        <a class="btn btn-outline" href="../index.html#projects" data-i18n="btn_all">← Todos os projetos</a>
       </div>
     </div>
   </section>
 
 </main>
 
-<footer class="footer">
-  <div class="footer-wm" aria-hidden="true"><img src="../Imagens/Banner_Fundo.png" alt="" /></div>
-  <div class="container footer-bottom">
-    <p>© 2026 Oliveira Systems — All rights reserved.</p>
-    <span class="status-dot">Municipal Health System · Java · Spring Boot</span>
+<footer class="footer-page">
+  <div class="container footer-bottom-page">
+    <p data-i18n="footer_copy">© 2026 Oliveira Systems — Todos os direitos reservados.</p>
+    <span class="status-dot">Sistema de Saúde Municipal · Java · Spring Boot</span>
   </div>
 </footer>
 
 <div class="image-modal" id="imageModal"><span class="close-modal">&times;</span><img id="modalImage" src="" alt="" /></div>
+<script src="saude.translations.js"></script>
 <script src="../main.js"></script>
 </body>
 </html>
