@@ -249,14 +249,28 @@ h1 .accent { color:var(--signal); white-space:nowrap; }
 @media (max-width: 860px) {
   .float-card { display:none; }
   .hero {
-    background-size:cover; background-position:center 15%;
+    min-height:100vh;
+    padding:110px 0 30px;
+    background-size:cover; background-position:center 25%;
   }
   .hero::before {
-    background:linear-gradient(180deg, rgba(4,5,6,.68) 0%, rgba(4,5,6,.95) 32%, rgba(4,5,6,.97) 100%);
+    background:linear-gradient(180deg, rgba(4,5,6,.55) 0%, rgba(4,5,6,.88) 45%, rgba(4,5,6,.97) 100%);
   }
   .hero::after {
-    background:rgba(4,5,6,.4);
+    background:rgba(4,5,6,.35);
   }
+  .hero h1 { font-size:clamp(2.1rem, 8vw, 3rem); }
+  .hero-sub { margin-top:16px; font-size:1rem; }
+  .hero-actions { margin-top:22px; }
+  .meta-row { margin-top:26px; gap:18px; }
+}
+@media (max-width: 860px) and (max-height: 720px) {
+  .hero { padding:80px 0 12px; }
+  .hero h1 { font-size:clamp(1.6rem, 6.5vw, 2.4rem); line-height:1.08; }
+  .hero-sub { margin-top:10px; font-size:.88rem; line-height:1.45; }
+  .hero-actions { margin-top:14px; }
+  .meta-row { margin-top:12px; gap:14px; }
+  .eyebrow { margin-bottom:10px; }
 }
 .panel-bar { display:flex; align-items:center; gap:8px; padding:16px 20px; border-bottom:1px solid var(--line); }
 .panel-bar span { width:9px; height:9px; border-radius:50%; background:var(--line-2); }
