@@ -286,6 +286,22 @@ h1 .accent { color:var(--signal); white-space:nowrap; }
   .meta-row { margin-top:12px; gap:14px; }
   .eyebrow { margin-bottom:10px; }
 }
+/* Celulares físicos com "Modo site para computador" ativado: a largura
+   virtual passa a ser >860px, então as regras mobile acima não disparam.
+   Aqui detectamos o hardware real (tela de toque, sem mouse) em vez da
+   largura, e reaplicamos uma versão das mesmas regras compactada para
+   essa largura virtual maior (geralmente ~980-1024px). */
+@media (min-width: 861px) and (pointer: coarse) and (hover: none) {
+  .hero {
+    min-height:100vh;
+    padding:90px 0 40px;
+  }
+  .hero h1 { font-size:clamp(2.2rem, 6vw, 3.2rem); }
+  .hero-sub { margin-top:16px; font-size:1rem; max-width:100%; }
+  .hero-actions { margin-top:22px; }
+  .meta-row { margin-top:26px; gap:18px; }
+  .float-card { display:none; }
+}
 .panel-bar { display:flex; align-items:center; gap:8px; padding:16px 20px; border-bottom:1px solid var(--line); }
 .panel-bar span { width:9px; height:9px; border-radius:50%; background:var(--line-2); }
 .panel-bar .live { margin-left:auto; display:flex; align-items:center; gap:7px; font-family:var(--font-mono); font-size:.68rem; color:var(--signal); }
@@ -729,7 +745,22 @@ input::placeholder, textarea::placeholder { color:var(--faint); }
 .case-intro { max-width:760px; font-size:1.12rem; color:var(--muted); margin-top:20px; line-height:1.75; }
 @media (max-width: 860px) {
   .case-hero {
-    background-size:cover; background-position:center 15%;
+    min-height:100vh; padding:110px 0 40px;
+    background-size:cover; background-position:77% 18%;
+  }
+  .case-hero::before {
+    background:linear-gradient(180deg, rgba(4,5,6,.68) 0%, rgba(4,5,6,.95) 32%, rgba(4,5,6,.97) 100%);
+  }
+  .case-hero::after {
+    background:rgba(4,5,6,.4);
+  }
+}
+/* Mesmo tratamento do .hero para "Modo site para computador" em celulares
+   reais (ver explicação detalhada na regra equivalente do .hero acima). */
+@media (min-width: 861px) and (pointer: coarse) and (hover: none) {
+  .case-hero {
+    min-height:100vh; padding:100px 0 40px;
+    background-size:cover; background-position:77% 16%;
   }
   .case-hero::before {
     background:linear-gradient(180deg, rgba(4,5,6,.68) 0%, rgba(4,5,6,.95) 32%, rgba(4,5,6,.97) 100%);
