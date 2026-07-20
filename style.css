@@ -49,6 +49,42 @@ img { display:block; max-width:100%; }
   *, *::before, *::after { animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important; scroll-behavior:auto !important; }
 }
 
+/* ─── VIEW TRANSITIONS (navegação entre páginas) ───
+   Ativa transição nativa do navegador entre páginas do site (Chrome/Edge 126+).
+   Em navegadores sem suporte, cai de volta pra navegação normal — sem quebra. */
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: .5s;
+  animation-timing-function: cubic-bezier(.4,0,.2,1);
+}
+
+/* header permanece fixo/visível durante a troca de página, em vez de piscar */
+.header { view-transition-name: site-header; }
+
+/* título do projeto "morfa" da lista de projetos pro estudo de caso, em todos os 12 projetos */
+#vt-title-tiremax { view-transition-name: project-title-tiremax; }
+#vt-title-saude { view-transition-name: project-title-saude; }
+#vt-title-guardian { view-transition-name: project-title-guardian; }
+#vt-title-minhaloja { view-transition-name: project-title-minhaloja; }
+#vt-title-vialivre { view-transition-name: project-title-vialivre; }
+#vt-title-applyai { view-transition-name: project-title-applyai; }
+#vt-title-safeher { view-transition-name: project-title-safeher; }
+#vt-title-crm { view-transition-name: project-title-crm; }
+#vt-title-funnel { view-transition-name: project-title-funnel; }
+#vt-title-barbermem { view-transition-name: project-title-barbermem; }
+#vt-title-taskjava { view-transition-name: project-title-taskjava; }
+#vt-title-taskapi { view-transition-name: project-title-taskapi; }
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) { animation:none !important; }
+}
+
 /* ─── SKIP LINK ─── */
 .skip-link {
   position:absolute; top:-60px; left:12px; z-index:2000;
