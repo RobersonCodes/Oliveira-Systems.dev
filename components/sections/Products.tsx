@@ -2,39 +2,48 @@
 
 import { motion } from "framer-motion";
 
-const products = [
+const solutions = [
   {
     number: "01",
-    name: "TireMax ERP",
-    category: "Gestão automotiva",
+    title: "SaaS sob medida",
     description:
-      "Uma plataforma completa para borracharias e centros automotivos controlarem ordens de serviço, estoque, clientes, veículos, financeiro e operação.",
-    technologies: ["Next.js", "PostgreSQL", "SaaS", "WhatsApp"],
-    href: "https://tiremax.vercel.app/",
-    background:
-      "bg-[radial-gradient(circle_at_80%_15%,rgba(193,150,82,0.20),transparent_30%),linear-gradient(135deg,#17140f_0%,#090909_70%)]",
+      "Produtos digitais escaláveis, preparados para autenticação, planos, pagamentos, gestão de usuários e crescimento contínuo.",
+    benefit: "Uma base digital pronta para evoluir com o negócio.",
   },
   {
     number: "02",
-    name: "Oliveira Apply AI",
-    category: "Inteligência aplicada",
+    title: "Sistemas empresariais",
     description:
-      "Uma experiência inteligente para organizar candidaturas, analisar oportunidades e acelerar a busca por vagas com automação e inteligência artificial.",
-    technologies: ["Next.js", "IA", "OAuth", "Stripe"],
-    href: "https://oliveira-apply-ai-okbt.vercel.app/",
-    background:
-      "bg-[radial-gradient(circle_at_15%_20%,rgba(112,110,190,0.22),transparent_32%),linear-gradient(135deg,#11111a_0%,#080809_70%)]",
+      "Soluções para organizar operações, vendas, estoque, clientes, financeiro e processos internos.",
+    benefit: "Mais clareza e controle sobre a operação.",
   },
   {
     number: "03",
-    name: "Milwaukee Connect",
-    category: "CRM empresarial",
+    title: "Automação com inteligência artificial",
     description:
-      "Arquitetura empresarial para gestão de clientes, oportunidades, indicadores comerciais e processos internos em uma única plataforma.",
-    technologies: ["Java", "Spring Boot", "React", "MySQL"],
-    href: "#contato",
-    background:
-      "bg-[radial-gradient(circle_at_75%_25%,rgba(75,125,120,0.24),transparent_32%),linear-gradient(135deg,#0d1715_0%,#080909_70%)]",
+      "Integrações com IA para atendimento, análise, geração de conteúdo, produtividade e automação de tarefas.",
+    benefit: "Tecnologia aplicada a rotinas que exigem agilidade.",
+  },
+  {
+    number: "04",
+    title: "Plataformas web de alta performance",
+    description:
+      "Aplicações responsivas, rápidas e modernas, desenvolvidas com foco em experiência do usuário e conversão.",
+    benefit: "Experiências consistentes em diferentes dispositivos.",
+  },
+  {
+    number: "05",
+    title: "APIs e integrações",
+    description:
+      "Conexão entre sistemas, bancos de dados, pagamentos, WhatsApp, serviços externos e ferramentas empresariais.",
+    benefit: "Processos conectados com menos trabalho manual.",
+  },
+  {
+    number: "06",
+    title: "Modernização de sistemas",
+    description:
+      "Evolução de aplicações antigas, melhoria de arquitetura, interface, desempenho, segurança e manutenção.",
+    benefit: "Software mais sustentável para os próximos ciclos.",
   },
 ];
 
@@ -42,6 +51,7 @@ export default function Products() {
   return (
     <section
       id="produtos"
+      aria-labelledby="produtos-title"
       className="overflow-hidden bg-[#0a0a09] px-6 py-28 text-[#f3efe7] md:px-12 md:py-40"
     >
       <div className="mx-auto max-w-[1500px]">
@@ -53,7 +63,7 @@ export default function Products() {
             transition={{ duration: 0.8 }}
             className="text-xs uppercase tracking-[0.34em] text-[#b99154]"
           >
-            02 — Produtos
+            02 — Soluções
           </motion.p>
 
           <motion.div
@@ -65,92 +75,59 @@ export default function Products() {
               ease: [0.22, 1, 0.36, 1],
             }}
           >
-            <h2 className="max-w-4xl font-serif text-[clamp(3rem,6vw,7rem)] leading-[0.9] tracking-[-0.045em]">
+            <h2
+              id="produtos-title"
+              className="max-w-4xl font-serif text-[clamp(3rem,6vw,7rem)] leading-[0.9] tracking-[-0.045em]"
+            >
               Tecnologia criada para existir no mundo real.
             </h2>
 
             <p className="mt-8 max-w-xl text-lg leading-8 text-white/55">
-              Produtos próprios, arquiteturas escaláveis e experiências
-              digitais construídas para resolver problemas concretos.
+              Soluções digitais construídas para organizar operações, conectar
+              processos e sustentar a evolução de cada negócio.
             </p>
           </motion.div>
         </div>
 
-        <div className="mt-16 space-y-8">
-          {products.map((product, index) => (
+        <div className="mt-16 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+          {solutions.map((solution, index) => (
             <motion.article
-              key={product.name}
-              initial={{ opacity: 0, y: 80 }}
+              key={solution.title}
+              initial={{ opacity: 0, y: 48 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{
-                duration: 1,
-                delay: index * 0.1,
+                duration: 0.8,
+                delay: index * 0.06,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className={`group relative min-h-[650px] overflow-hidden rounded-[2rem] border border-white/10 p-7 md:p-12 lg:p-16 ${product.background}`}
+              className="group flex min-h-[390px] flex-col justify-between rounded-[2rem] border border-white/10 bg-[radial-gradient(circle_at_85%_10%,rgba(185,145,84,.13),transparent_34%),rgba(255,255,255,.025)] p-8 transition-colors duration-500 hover:border-[#b99154]/35 hover:bg-white/[.045] md:p-10"
             >
-              <motion.div
-                className="absolute -right-24 -top-24 h-80 w-80 rounded-full border border-white/10"
-                whileHover={{ scale: 1.15, rotate: 12 }}
-                transition={{ duration: 0.8 }}
-              />
-
-              <div className="relative z-10 flex min-h-[530px] flex-col justify-between">
-                <div className="flex items-start justify-between gap-8">
-                  <div>
-                    <p className="text-xs uppercase tracking-[0.3em] text-white/45">
-                      {product.category}
-                    </p>
-
-                    <h3 className="mt-5 font-serif text-5xl tracking-[-0.04em] md:text-7xl lg:text-8xl">
-                      {product.name}
-                    </h3>
-                  </div>
-
-                  <span className="text-sm tracking-[0.3em] text-[#b99154]">
-                    {product.number}
+              <div>
+                <div className="flex items-center justify-between gap-6">
+                  <p className="text-xs uppercase tracking-[0.28em] text-white/40">
+                    Solução
+                  </p>
+                  <span className="text-xs tracking-[0.28em] text-[#b99154]">
+                    {solution.number}
                   </span>
                 </div>
 
-                <div className="grid items-end gap-12 lg:grid-cols-2">
-                  <p className="max-w-2xl text-xl leading-9 text-white/65 md:text-2xl">
-                    {product.description}
-                  </p>
+                <h3 className="mt-12 max-w-sm font-serif text-4xl leading-[1.02] tracking-[-0.035em]">
+                  {solution.title}
+                </h3>
+                <p className="mt-7 text-base leading-7 text-white/55">
+                  {solution.description}
+                </p>
+              </div>
 
-                  <div className="lg:justify-self-end">
-                    <div className="mb-10 flex max-w-md flex-wrap gap-3">
-                      {product.technologies.map((technology) => (
-                        <span
-                          key={technology}
-                          className="rounded-full border border-white/15 px-4 py-2 text-xs uppercase tracking-[0.2em] text-white/55"
-                        >
-                          {technology}
-                        </span>
-                      ))}
-                    </div>
-
-                    <motion.a
-                      href={product.href}
-                      target={
-                        product.href.startsWith("http") ? "_blank" : undefined
-                      }
-                      rel={
-                        product.href.startsWith("http")
-                          ? "noreferrer"
-                          : undefined
-                      }
-                      whileHover={{ x: 8 }}
-                      className="inline-flex items-center gap-5 text-xs uppercase tracking-[0.3em] text-[#d0b17d]"
-                    >
-                      Conhecer produto
-
-                      <span className="grid h-14 w-14 place-items-center rounded-full border border-[#b99154]/50 transition-colors duration-300 group-hover:bg-[#b99154] group-hover:text-black">
-                        ↗
-                      </span>
-                    </motion.a>
-                  </div>
-                </div>
+              <div className="mt-12 border-t border-white/10 pt-6">
+                <p className="text-xs uppercase tracking-[0.24em] text-[#b99154]">
+                  Benefício
+                </p>
+                <p className="mt-3 leading-7 text-white/70">
+                  {solution.benefit}
+                </p>
               </div>
             </motion.article>
           ))}
