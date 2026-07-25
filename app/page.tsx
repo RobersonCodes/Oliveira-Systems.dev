@@ -9,13 +9,31 @@ import Manifesto from "@/components/sections/Manifesto";
 import Products from "@/components/sections/Products";
 import Story from "@/components/sections/Story";
 
-import Cursor from "@/components/ui/Cursor";
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Oliveira Systems",
+  url: "https://www.oliveirasystems.dev",
+  logo: "https://www.oliveirasystems.dev/favicon.ico",
+  founder: {
+    "@type": "Person",
+    name: "Roberson de Oliveira",
+  },
+  description:
+    "Desenvolvimento de produtos SaaS, sistemas empresariais e experiências digitais.",
+  email: "mailto:roberson_sl@hotmail.com",
+  areaServed: "BR",
+};
 
 export default function Home() {
   return (
     <SmoothScroll>
-      <Cursor />
-
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(organizationSchema).replace(/</g, "\\u003c"),
+        }}
+      />
       <Navbar />
 
       <main id="main-content">

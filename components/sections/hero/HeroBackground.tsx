@@ -27,7 +27,7 @@ export default function HeroBackground() {
         muted
         loop
         playsInline
-        preload="metadata"
+        preload="none"
         poster="/images/hero-poster.jpg"
         aria-hidden="true"
         tabIndex={-1}

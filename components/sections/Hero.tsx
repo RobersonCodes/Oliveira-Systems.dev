@@ -6,6 +6,7 @@ export default function Hero() {
   return (
     <section
       id="inicio"
+      aria-labelledby="hero-title"
       className="relative flex min-h-screen items-end overflow-hidden bg-[#0b0b0a] px-6 pb-12 pt-32 text-[#f3efe7] md:px-12 md:pb-16"
     >
       <HeroBackground />
