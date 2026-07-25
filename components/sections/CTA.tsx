@@ -27,16 +27,15 @@ export default function CTA() {
             desenvolvidos com clareza, tecnologia e visão de longo prazo.
           </p>
 
-          <button
-            type="button"
-            disabled
-            aria-describedby="contato-status"
-            className="mt-12 inline-flex cursor-not-allowed items-center gap-4 rounded-full border border-[#b99154]/40 px-8 py-4 text-xs uppercase tracking-[0.25em] text-[#d7b882]/65"
+          <a
+            href="mailto:roberson_sl@hotmail.com?subject=Projeto%20com%20a%20Oliveira%20Systems"
+            className="mt-12 inline-flex items-center gap-4 rounded-full border border-[#b99154]/60 px-8 py-4 text-xs uppercase tracking-[0.25em] text-[#d7b882] transition-colors hover:bg-[#b99154] hover:text-black"
           >
-            Canal de contato em definição
-          </button>
-          <p id="contato-status" className="mt-4 text-sm text-white/40">
-            Os dados oficiais de contato serão disponibilizados em breve.
+            Iniciar conversa
+            <span aria-hidden="true">↗</span>
+          </a>
+          <p className="mt-4 text-sm text-white/50">
+            Resposta direta por e-mail.
           </p>
         </div>
       </div>

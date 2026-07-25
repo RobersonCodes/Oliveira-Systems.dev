@@ -23,6 +23,7 @@ export default function HeroContent() {
         </motion.p>
 
         <motion.h1
+          id="hero-title"
           initial={{ opacity: 0, y: 70 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
