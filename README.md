@@ -1,36 +1,106 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Oliveira Systems
 
-## Getting Started
+Site institucional da Oliveira Systems, um estúdio de engenharia digital voltado
+à criação de produtos SaaS, sistemas empresariais e experiências digitais
+modernas, escaláveis e orientadas a resultados.
 
-First, run the development server:
+## Principais seções
+
+- **Hero:** apresentação da marca e proposta central.
+- **Manifesto:** visão da Oliveira Systems sobre produtos digitais.
+- **História:** contexto sobre evolução de empresas e processos.
+- **Produtos:** TireMax ERP, Oliveira Apply AI e Milwaukee Connect.
+- **Cases:** seleção dos produtos desenvolvidos pela Oliveira Systems.
+- **Contato:** chamada para desenvolvimento de novos projetos.
+
+## Tecnologias
+
+- Next.js 16 com App Router e Turbopack
+- React 19
+- TypeScript
+- Tailwind CSS 4
+- Framer Motion
+- Lenis
+
+## Requisitos
+
+- Node.js 20.9.0 ou superior
+- npm compatível com a versão instalada do Node.js
+
+## Instalação local
+
+Clone ou copie o projeto, acesse sua pasta e instale as dependências travadas no
+`package-lock.json`:
+
+```bash
+npm ci
+```
+
+Inicie o ambiente de desenvolvimento:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+O site estará disponível em [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Comandos
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+# Ambiente de desenvolvimento
+npm run dev
 
-## Learn More
+# Análise estática com ESLint
+npm run lint
 
-To learn more about Next.js, take a look at the following resources:
+# Verificação de tipos sem gerar arquivos
+npx tsc --noEmit
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Build otimizado de produção
+npm run build
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Executar o build localmente
+npm run start
+```
 
-## Deploy on Vercel
+## Estrutura resumida
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```text
+app/
+  layout.tsx          Layout raiz, idioma e metadata
+  page.tsx            Composição da página principal
+  globals.css         Estilos e preferências globais
+components/
+  animations/         Infraestrutura e efeitos de movimento
+  layout/             Navbar e Footer
+  sections/           Seções da página
+  ui/                 Componentes visuais reutilizáveis
+public/
+  images/             Imagens estáticas
+  videos/             Vídeos estáticos
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Acessibilidade
+
+O projeto inclui navegação mobile por teclado, link para pular ao conteúdo,
+estados de foco visíveis e suporte a `prefers-reduced-motion`. Com movimento
+reduzido ativo, o smooth scroll e o cursor personalizado são desativados e as
+animações não essenciais são simplificadas.
+
+## Deploy na Vercel
+
+1. Publique o repositório em um provedor Git.
+2. Importe o repositório na Vercel.
+3. Mantenha o framework detectado como Next.js.
+4. Use `npm run build` como comando de build, caso a detecção automática não o
+   preencha.
+5. Valide o domínio e eventuais variáveis de ambiente antes de promover o
+   deployment para produção.
+
+Este projeto não depende atualmente de variáveis de ambiente para gerar a página
+principal.
+
+## Propriedade
+
+Projeto proprietário da Oliveira Systems. Nenhuma licença de código aberto foi
+declarada. Todos os direitos reservados.

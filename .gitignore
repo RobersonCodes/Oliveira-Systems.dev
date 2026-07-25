@@ -22,7 +22,14 @@
 
 # misc
 .DS_Store
+*.log
 *.pem
+*.key
+*.p12
+*.pfx
+.cache/
+.turbo/
+.eslintcache
 
 # debug
 npm-debug.log*

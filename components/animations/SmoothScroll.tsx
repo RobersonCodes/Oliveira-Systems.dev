@@ -1,5 +1,6 @@
 "use client";
 
+import { MotionConfig, useReducedMotion } from "framer-motion";
 import Lenis from "lenis";
 import { ReactNode, useEffect } from "react";
 
@@ -8,7 +9,13 @@ type SmoothScrollProps = {
 };
 
 export default function SmoothScroll({ children }: SmoothScrollProps) {
+  const shouldReduceMotion = useReducedMotion();
+
   useEffect(() => {
+    if (shouldReduceMotion) {
+      return;
+    }
+
     const lenis = new Lenis({
       duration: 1.15,
       smoothWheel: true,
@@ -28,7 +35,7 @@ export default function SmoothScroll({ children }: SmoothScrollProps) {
       cancelAnimationFrame(animationFrameId);
       lenis.destroy();
     };
-  }, []);
+  }, [shouldReduceMotion]);
 
-  return <>{children}</>;
+  return <MotionConfig reducedMotion="user">{children}</MotionConfig>;
 }

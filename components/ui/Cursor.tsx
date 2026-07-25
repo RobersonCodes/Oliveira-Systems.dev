@@ -1,9 +1,15 @@
 "use client";
 
-import { motion, useMotionValue, useSpring } from "framer-motion";
+import {
+  motion,
+  useMotionValue,
+  useReducedMotion,
+  useSpring,
+} from "framer-motion";
 import { useEffect } from "react";
 
 export default function Cursor() {
+  const shouldReduceMotion = useReducedMotion();
   const mouseX = useMotionValue(-100);
   const mouseY = useMotionValue(-100);
 
@@ -18,6 +24,10 @@ export default function Cursor() {
   });
 
   useEffect(() => {
+    if (shouldReduceMotion) {
+      return;
+    }
+
     const move = (e: MouseEvent) => {
       mouseX.set(e.clientX - 12);
       mouseY.set(e.clientY - 12);
@@ -26,10 +36,15 @@ export default function Cursor() {
     window.addEventListener("mousemove", move);
 
     return () => window.removeEventListener("mousemove", move);
-  }, [mouseX, mouseY]);
+  }, [mouseX, mouseY, shouldReduceMotion]);
+
+  if (shouldReduceMotion) {
+    return null;
+  }
 
   return (
     <motion.div
+      aria-hidden="true"
       style={{ x, y }}
       className="
         pointer-events-none
