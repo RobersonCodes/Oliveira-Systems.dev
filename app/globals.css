@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0b0b0a;
+  --foreground: #f3efe7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button,
+a {
+  color: inherit;
+}
+
+.font-serif {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+::selection {
+  background: #b99154;
+  color: #0b0b0a;
+}
